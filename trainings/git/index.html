@@ -28,11 +28,11 @@
 </script></section><section  data-markdown><script type="text/template">
 ## Schedule
 
-* The Good, the Bad and the Ugly
-* Gitception: Reaching into the substructure
-* Of trees, branches and pieces of fruit
-* Gitbreak: Try to keep the holistic view
-* Workfellas: Five ways to contribute to the code base
+* Motivation of this workshop
+* Creating versions and its internals
+* Branching and joining development histories
+* Working with remotes
+* Workflows for collaboration
 
 <aside class="notes"><p>There are going to be excercises after or during each block!</p>
 <ul>
@@ -92,8 +92,6 @@ ArX, Bazaar, BitKeeper, Codeville, CVS, Darcs, DCVS, Fossil, Git, GNU arch, Merc
 </script></section><section  data-markdown><script type="text/template">
 # Git
 </script></section><section  data-markdown><script type="text/template">
-![The Good](https://upload.wikimedia.org/wikipedia/it/5/50/Il_biondo.png)<!-- .element: height="500px" -->
-</script></section><section  data-markdown><script type="text/template">
 ## Git
 
 "... is oddly liberal with how and when you use it."
@@ -109,8 +107,6 @@ ArX, Bazaar, BitKeeper, Codeville, CVS, Darcs, DCVS, Fossil, Git, GNU arch, Merc
 <li>This liberty also allows to evolve your development workflow</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
-![The Ugly](https://upload.wikimedia.org/wikipedia/it/e/e7/Il_brutto.png)<!-- .element: height="500px" -->
-</script></section><section  data-markdown><script type="text/template">
 ## Git
 
 ... is utterly complex
@@ -125,8 +121,6 @@ ArX, Bazaar, BitKeeper, Codeville, CVS, Darcs, DCVS, Fossil, Git, GNU arch, Merc
 <li>beginners are confronted with internal details</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
-![The Bad](https://upload.wikimedia.org/wikipedia/it/6/68/Il_cattivo.png)<!-- .element: height="500px" -->
-</script></section><section  data-markdown><script type="text/template">
 ## Git
 
 ... is really hard to learn
@@ -152,25 +146,6 @@ ArX, Bazaar, BitKeeper, Codeville, CVS, Darcs, DCVS, Fossil, Git, GNU arch, Merc
 <aside class="notes"><ul>
 <li>But only if you&#39;re willing to change!</li>
 <li>Improvement always comes with change!</li>
-</ul>
-</aside></script></section><section  data-markdown><script type="text/template">
-## Exercises
-
-* How long have been programming?
-* What kind of software do you work on?
-* What kind of tasks do you solve?
-* What challenges you the most when writing software?
-* Have you been using other version control systems?
-* How long have been using Git?
-* What challenges you the most when using Git?
-</script></section><section  data-markdown><script type="text/template">
-# Discussion
-
-<aside class="notes"><ul>
-<li>Context - Cynefin</li>
-<li>Primary vs. secondary needs</li>
-<li>Handling complexity</li>
-<li>Values &gt; Principles &gt; Methods &gt; Tools &amp; Activities</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Slides
@@ -224,9 +199,9 @@ Initialized empty Git repository in ~/working/directory/.git/
 ```shell
 $ ls -blah
 total 0
-drwxr-xr-x. 3 escodebar escodebar  60 Jun 15 18:15 .
-drwx------. 3 escodebar escodebar  60 Jun 15 18:15 ..
-drwxrwxr-x. 7 escodebar escodebar 200 Jun 15 18:15 .git
+drwxr-xr-x. 3 escodebar escodebar  60 Jun 16 00:04 .
+drwx------. 3 escodebar escodebar  60 Jun 16 00:04 ..
+drwxrwxr-x. 7 escodebar escodebar 200 Jun 16 00:04 .git
 ```
 
 See that `.git` folder there? That's the repository.
@@ -245,16 +220,16 @@ Don't panic!
 ```shell
 $ ls -blah .git
 total 12K
-drwxrwxr-x. 7 escodebar escodebar 200 Jun 15 18:15 .
-drwxr-xr-x. 3 escodebar escodebar  60 Jun 15 18:15 ..
-drwxrwxr-x. 2 escodebar escodebar  40 Jun 15 18:15 branches
--rw-rw-r--. 1 escodebar escodebar  92 Jun 15 18:15 config
--rw-rw-r--. 1 escodebar escodebar  73 Jun 15 18:15 description
--rw-rw-r--. 1 escodebar escodebar  23 Jun 15 18:15 HEAD
-drwxrwxr-x. 2 escodebar escodebar 280 Jun 15 18:15 hooks
-drwxrwxr-x. 2 escodebar escodebar  60 Jun 15 18:15 info
-drwxrwxr-x. 4 escodebar escodebar  80 Jun 15 18:15 objects
-drwxrwxr-x. 4 escodebar escodebar  80 Jun 15 18:15 refs
+drwxrwxr-x. 7 escodebar escodebar 200 Jun 16 00:04 .
+drwxr-xr-x. 3 escodebar escodebar  60 Jun 16 00:04 ..
+drwxrwxr-x. 2 escodebar escodebar  40 Jun 16 00:04 branches
+-rw-rw-r--. 1 escodebar escodebar  92 Jun 16 00:04 config
+-rw-rw-r--. 1 escodebar escodebar  73 Jun 16 00:04 description
+-rw-rw-r--. 1 escodebar escodebar  23 Jun 16 00:04 HEAD
+drwxrwxr-x. 2 escodebar escodebar 280 Jun 16 00:04 hooks
+drwxrwxr-x. 2 escodebar escodebar  60 Jun 16 00:04 info
+drwxrwxr-x. 4 escodebar escodebar  80 Jun 16 00:04 objects
+drwxrwxr-x. 4 escodebar escodebar  80 Jun 16 00:04 refs
 ```
 
 This is deep enough for now!
@@ -291,7 +266,7 @@ We are creating a repository inside the repository
 <!-- .element: class="fragment" -->
 ```shell
 $ git init . && git add -A && git commit -m "Add the repository"
-[master (root-commit) aa92d21] Add the repository
+[master (root-commit) 4df01d6] Add the repository
  15 files changed, 653 insertions(+)
  create mode 100644 HEAD
  create mode 100644 config
@@ -375,7 +350,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 aka. *the staging area*
 
-![The index](http://web.archive.org/web/20090210020404id_/http://whygitisbetterthanx.com/images/index1.png) <!-- .element: height="250px" style="background: white" -->
+![The index](http://www.tigraine.at/wp-content/uploads/2010/09/image6.png) <!-- .element: height="250px" style="background: white" -->
 
 "*...is an intermediate area which allows to setup the change before making the commit.*"
 
@@ -414,7 +389,7 @@ Changes to be committed:
 
 ```shell
 $ git add . && git commit -m "Add files to index"
-[master 2231cc5] Add files to index
+[master 82fb5ca] Add files to index
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 index
  create mode 100644 objects/b2/7501ade65f39bc91a5e6eb0d707903ba225a00
@@ -514,7 +489,7 @@ aka. *a change*
 ...by commiting them to the repository
 ```shell
 $ git commit -m "Describe the training"
-[master (root-commit) 1a72aa2] Describe the training
+[master (root-commit) 874fc95] Describe the training
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 ```
@@ -522,7 +497,7 @@ $ git commit -m "Describe the training"
 <aside class="notes"><ul>
 <li><code>master</code> is the default branch name by default (the name of the default branch is configurable)</li>
 <li><code>root-commit</code>: This is a special one, it has no parent, well see that in a minute</li>
-<li><code>1a72aa2</code> is part of the hash of the commit</li>
+<li><code>874fc95</code> is part of the hash of the commit</li>
 <li>Git tells you the the number of files changed, lines inserted or deleted</li>
 <li>Create mode with permissions (not all permissions are stored in Git)</li>
 <li>You can also run just <code>git commit</code> without the <code>-m</code> argument, then your editor will pop-up</li>
@@ -535,12 +510,12 @@ The repository's content must have changed...
 
 ```shell
 $ git add . && git commit -m "Commit file"
-[master c6fae32] Commit file
- 7 files changed, 6 insertions(+)
+[master 069db3c] Commit file
+ 7 files changed, 7 insertions(+)
  create mode 100644 COMMIT_EDITMSG
  create mode 100644 logs/HEAD
  create mode 100644 logs/refs/heads/master
- create mode 100644 objects/1a/72aa298e80003e7b0a297d3c797ff0672d4de6
+ create mode 100644 objects/87/4fc95348107025a424bc7c5bd5eb07d4474424
  create mode 100644 objects/a4/4f211c376b94d122c6429ef8e87ffa7856419d
  create mode 100644 refs/heads/master
 ```
@@ -553,7 +528,7 @@ $ git add . && git commit -m "Commit file"
 <li>The logs keep track of the commit hashes the references pointed to, they become handy when branches are lost (more about this later)</li>
 <li>There is also a log for the <code>HEAD</code> (more about the <code>HEAD</code> later)</li>
 <li>References (or refs here) are discussed later - see the <code>master</code> there again?</li>
-<li>One of the objects (<code>1a72aa2</code>) has the same hash as the previously made commit</li>
+<li>One of the objects (<code>874fc95</code>) has the same hash as the previously made commit</li>
 <li>...and look! An other object!</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
@@ -561,14 +536,14 @@ $ git add . && git commit -m "Commit file"
 
 What is the object with the commit's hash?
 ```shell
-$ git cat-file -t 1a72aa2
+$ git cat-file -t 874fc95
 commit
 ```
 ```shell
-$ git cat-file -p 1a72aa2
+$ git cat-file -p 874fc95
 tree a44f211c376b94d122c6429ef8e87ffa7856419d
-author Pablo Escodebar <escodebar@gmail.com> 1592237756 +0200
-committer Pablo Escodebar <escodebar@gmail.com> 1592237756 +0200
+author Pablo Escodebar <escodebar@gmail.com> 1623794684 +0200
+committer Pablo Escodebar <escodebar@gmail.com> 1623794684 +0200
 
 Describe the training
 ```
@@ -612,9 +587,9 @@ You will also be able to find &quot;lost&quot; files, folders and commits!</p>
 Take a look at a change using:
 ```shell
 $ git show
-commit 1a72aa298e80003e7b0a297d3c797ff0672d4de6
+commit 874fc95348107025a424bc7c5bd5eb07d4474424
 Author: Pablo Escodebar <escodebar@gmail.com>
-Date:   Mon Jun 15 18:15:56 2020 +0200
+Date:   Wed Jun 16 00:04:44 2021 +0200
 
     Describe the training
 
@@ -655,7 +630,7 @@ index b27501a..22d2d62 100644
 
 ```shell
 $ git commit -m "Motivate the participant"
-[master 7e68af6] Motivate the participant
+[master 1ac27a1] Motivate the participant
  1 file changed, 1 insertion(+)
 ```
 
@@ -690,11 +665,11 @@ This is a great way to group your code!
 
 This second commit shouldn't be a root commit:
 ```shell
-$ git cat-file -p 7e68af6
+$ git cat-file -p 1ac27a1
 tree 10d06a676fb65acc4b1a2e57454039d904318393
-parent 1a72aa298e80003e7b0a297d3c797ff0672d4de6
-author Pablo Escodebar <escodebar@gmail.com> 1592237756 +0200
-committer Pablo Escodebar <escodebar@gmail.com> 1592237756 +0200
+parent 874fc95348107025a424bc7c5bd5eb07d4474424
+author Pablo Escodebar <escodebar@gmail.com> 1623794684 +0200
+committer Pablo Escodebar <escodebar@gmail.com> 1623794684 +0200
 
 Motivate the participant
 ```
@@ -718,12 +693,12 @@ index 22d2d62..3f652ed 100644
  # My awwwesome training
  This training will make you better!
 +Buy me a beer if it made you better.
-(1/1) Stage this hunk [y,n,q,a,d,e,?]? 
+(1/1) Stage this hunk [y,n,q,a,d,e,?]?
 ```
 
 Once all hunks are decided, a commit will be created
 ```shell
-[master 136082c] Motivate the speaker
+[master 6c2a61e] Motivate the speaker
  1 file changed, 1 insertion(+)
 ```
 
@@ -754,9 +729,9 @@ Once all hunks are decided, a commit will be created
 Take a look back at your work using:
 ```shell
 $ git log --oneline
-136082c Motivate the speaker
-7e68af6 Motivate the participant
-1a72aa2 Describe the training
+6c2a61e Motivate the speaker
+1ac27a1 Motivate the participant
+874fc95 Describe the training
 ```
 ...so this is why we want short commit titles?
 
@@ -772,14 +747,14 @@ $ git log --oneline
 Add the new objects to the repository's repository:
 ```shell
 $ git add . && git commit -m "Use the patch mode"
-[master f39e882] Use the patch mode
- 11 files changed, 9 insertions(+), 2 deletions(-)
+[master 8390eb9] Use the patch mode
+ 11 files changed, 8 insertions(+), 2 deletions(-)
  create mode 100644 objects/10/d06a676fb65acc4b1a2e57454039d904318393
- create mode 100644 objects/13/6082c01f1a06f705b7414ad92b64f289831abd
+ create mode 100644 objects/1a/c27a1cc753d195838cd9280d4736874f3867fc
  create mode 100644 objects/22/d2d6223474b8b442b8aae05d4deab6f57a4a2a
  create mode 100644 objects/38/52d81df67551ce4174a25ce844cf690499f55c
  create mode 100644 objects/3f/652ededa8ed2a054ffa2c02bb34f99b53e94dd
- create mode 100644 objects/7e/68af6cdcddc12f3276742e20253fdf8ef4c018
+ create mode 100644 objects/6c/2a61e3b5e1d75b929e7a5a1e06caab0a20bf89
 ```
 <!-- .element: style="font-size: 0.465em;" -->
 
@@ -862,14 +837,14 @@ How are branches stored in the repository?
 
 ```shell
 $ git add . && git commit -m "Add a new branch"
-[master fc0b16e] Add a new branch
+[master 8ef0041] Add a new branch
  2 files changed, 2 insertions(+)
  create mode 100644 logs/refs/heads/pe/new_branch
  create mode 100644 refs/heads/pe/new_branch
 ```
 ```shell
 $ cat refs/heads/pe/new_branch
-136082c01f1a06f705b7414ad92b64f289831abd
+6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89
 ```
 
 It's just a file with a hash
@@ -886,10 +861,10 @@ It's just a file with a hash
 
 Let's see what the hash is
 ```shell
-$ git show 136082c01f1a06f705b7414ad92b64f289831abd
-commit 136082c01f1a06f705b7414ad92b64f289831abd
+$ git show 6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89
+commit 6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89
 Author: Pablo Escodebar <escodebar@gmail.com>
-Date:   Mon Jun 15 18:15:56 2020 +0200
+Date:   Wed Jun 16 00:04:44 2021 +0200
 
     Motivate the speaker
 
@@ -929,7 +904,7 @@ Switched to branch 'pe/new_branch'
 
 ```shell
 $ git add . && git commit -m "Check out the branch"
-[master 0feaa00] Check out the branch
+[master 99d3cb3] Check out the branch
  2 files changed, 2 insertions(+), 1 deletion(-)
 ```
 
@@ -942,9 +917,9 @@ $ git add . && git commit -m "Check out the branch"
 `git show` comes with many options:
 ```shell
 $ git show --name-only
-commit 0feaa00c254b9304af040ddfe1b530d6d2cc39b7
+commit 99d3cb312dbe7681e2bdb435f02eefb700af7f2e
 Author: Pablo Escodebar <escodebar@gmail.com>
-Date:   Mon Jun 15 18:15:56 2020 +0200
+Date:   Wed Jun 16 00:04:44 2021 +0200
 
     Check out the branch
 
@@ -992,7 +967,7 @@ $ cat << EOBL > beers.md && git add beers.md
 EOBL
 $ echo "My list of [favorite beers](beers.md)." >> README.md
 $ git commit -a -m "Let people know, what beer to buy"
-[pe/add_list_of_favorite_beers e6c1717] Let people know, what beer to buy
+[pe/add_list_of_favorite_beers d5a1ac9] Let people know, what beer to buy
  2 files changed, 6 insertions(+)
  create mode 100644 beers.md
 ```
@@ -1023,7 +998,7 @@ $ cat << EOWL > whiskeys.md && git add whiskeys.md
 EOWL
 $ echo '[These whiskeys](whiskeys.md) are great!' >> README.md
 $ git commit -am "Accept whiskey as reward"
-[pe/whiskey_is_also_an_option 61b15c3] Accept whiskey as reward
+[pe/whiskey_is_also_an_option 0962c48] Accept whiskey as reward
  2 files changed, 7 insertions(+)
  create mode 100644 whiskeys.md
 ```
@@ -1036,21 +1011,21 @@ $ git commit -am "Accept whiskey as reward"
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Clean up!
 
-We do not want to have uncommitted changes 
+We do not want to have uncommitted changes
 ```shell
 $ git add . && git commit -m "Add branches with conflicting commits"
-[master bfd75ef] Add branches with conflicting commits
- 16 files changed, 23 insertions(+), 2 deletions(-)
+[master 7c68a8b] Add branches with conflicting commits
+ 16 files changed, 17 insertions(+), 2 deletions(-)
  create mode 100644 logs/refs/heads/pe/add_list_of_favorite_beers
  create mode 100644 logs/refs/heads/pe/whiskey_is_also_an_option
+ create mode 100644 objects/09/62c4822df870960e3352ddf89d7dcaea6e8eed
  create mode 100644 objects/0d/f4281955475551ad1a4232fce76a5fb6d340d0
  create mode 100644 objects/21/990ee9610d1601649ca9c669f7f51ecad5358b
- create mode 100644 objects/61/b15c3bc3152543b29c9069edafe85d5624bbd9
  create mode 100644 objects/7e/c764e3ac5af8a360fc2df5ac5c58aa5bffcd11
  create mode 100644 objects/9c/8d69a8414db1654a6c725de0c670fa28df33a4
  create mode 100644 objects/a2/8e0af61a8785cfec49e2ea707f8172d4b93b78
  create mode 100644 objects/d3/719373bb86bdd46c56e521135a1bd7f69d40ab
- create mode 100644 objects/e6/c1717b9a80f504b890dd3130febc666467063a
+ create mode 100644 objects/d5/a1ac9cff8e5096f8a336f024395837d87cb44e
  create mode 100644 refs/heads/pe/add_list_of_favorite_beers
  create mode 100644 refs/heads/pe/whiskey_is_also_an_option
 ```
@@ -1068,12 +1043,12 @@ $ git add . && git commit -m "Add branches with conflicting commits"
 Take a look at the graph of the repository using:
 ```shell
 $ git log --oneline --all --graph
-* e6c1717 Let people know, what beer to buy
-| * 61b15c3 Accept whiskey as reward
-|/  
-* 136082c Motivate the speaker
-* 7e68af6 Motivate the participant
-* 1a72aa2 Describe the training
+* d5a1ac9 Let people know, what beer to buy
+| * 0962c48 Accept whiskey as reward
+|/
+* 6c2a61e Motivate the speaker
+* 1ac27a1 Motivate the participant
+* 874fc95 Describe the training
 ```
 <!-- .element: style="font-size: 0.46em;" -->
 Our tree starts growing branches!
@@ -1158,7 +1133,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 How does Git handle merge conflicts?
 ```shell
 $ git add . && git commit -m "Commit during merge conflict"
-[master 0cf5ac8] Commit during merge conflict
+[master a226e18] Commit during merge conflict
  10 files changed, 14 insertions(+), 1 deletion(-)
  create mode 100644 MERGE_HEAD
  create mode 100644 MERGE_MODE
@@ -1202,7 +1177,7 @@ Whiskey is also a good reward.
 >>>>>>> pe/whiskey_is_also_an_option
 ```
 
-Looks like the `README` file... 
+Looks like the `README` file...
 
 <aside class="notes"><ul>
 <li>Git stores conflicting files in objects as well</li>
@@ -1309,7 +1284,7 @@ to open your editor to write the commit's message
 or commit yourself directly
 ```shell
 $ git commit -m "Add the list of beers first"
-[pe/merging d4691a8] Add the list of beers first
+[pe/merging 4bc1546] Add the list of beers first
 ```
 That was easy!
 
@@ -1321,16 +1296,16 @@ That was easy!
 
 Merge commits are special...
 ```shell
-$ git cat-file -t d4691a8
+$ git cat-file -t 4bc1546
 commit
 ```
 ```shell
-$ git cat-file -p d4691a8
+$ git cat-file -p 4bc1546
 tree d5a29e72348dd06004654c605f561d7d6fc32e6c
-parent e6c1717b9a80f504b890dd3130febc666467063a
-parent 61b15c3bc3152543b29c9069edafe85d5624bbd9
-author Pablo Escodebar <escodebar@gmail.com> 1592237756 +0200
-committer Pablo Escodebar <escodebar@gmail.com> 1592237756 +0200
+parent d5a1ac9cff8e5096f8a336f024395837d87cb44e
+parent 0962c4822df870960e3352ddf89d7dcaea6e8eed
+author Pablo Escodebar <escodebar@gmail.com> 1623794684 +0200
+committer Pablo Escodebar <escodebar@gmail.com> 1623794684 +0200
 
 Add the list of beers first
 ```
@@ -1346,9 +1321,9 @@ Add the list of beers first
 
 ```shell
 $ git show HEAD^1
-commit e6c1717b9a80f504b890dd3130febc666467063a
+commit d5a1ac9cff8e5096f8a336f024395837d87cb44e
 Author: Pablo Escodebar <escodebar@gmail.com>
-Date:   Mon Jun 15 18:15:56 2020 +0200
+Date:   Wed Jun 16 00:04:44 2021 +0200
 
     Let people know, what beer to buy
 
@@ -1383,9 +1358,9 @@ index 0000000..7ec764e
 ## Meet the parents 2
 ```shell
 $ git show HEAD^2
-commit 61b15c3bc3152543b29c9069edafe85d5624bbd9
+commit 0962c4822df870960e3352ddf89d7dcaea6e8eed
 Author: Pablo Escodebar <escodebar@gmail.com>
-Date:   Mon Jun 15 18:15:56 2020 +0200
+Date:   Wed Jun 16 00:04:44 2021 +0200
 
     Accept whiskey as reward
 
@@ -1423,14 +1398,14 @@ index 0000000..0df4281
 Commit the changes into the repository's repository
 ```shell
 $ git add . && git commit -m "Add the merge"
-[master c5d8cfc] Add the merge
+[master bc56dd4] Add the merge
  11 files changed, 5 insertions(+), 7 deletions(-)
  delete mode 100644 MERGE_HEAD
  delete mode 100644 MERGE_MODE
  delete mode 100644 MERGE_MSG
  rewrite index (100%)
+ create mode 100644 objects/4b/c15468c7ca5050bf603a7f538ba8b18149d91e
  create mode 100644 objects/93/d56bde8cd7e1ac44d1f4f454a189b71b7b0d1f
- create mode 100644 objects/d4/691a8ded5b5f913c33bdf6f8c90f41caf24283
  create mode 100644 objects/d5/a29e72348dd06004654c605f561d7d6fc32e6c
 ```
 <!-- .element: style="font-size: 0.51em;" -->
@@ -1469,10 +1444,10 @@ Switched to a new branch 'pe/cherry_picking'
 Find the hash of the cherry (commit) to be picked
 ```shell
 $ git log --oneline pe/whiskey_is_also_an_option
-61b15c3 Accept whiskey as reward
-136082c Motivate the speaker
-7e68af6 Motivate the participant
-1a72aa2 Describe the training
+0962c48 Accept whiskey as reward
+6c2a61e Motivate the speaker
+1ac27a1 Motivate the participant
+874fc95 Describe the training
 ```
 
 <aside class="notes"><ul>
@@ -1498,13 +1473,13 @@ CONFLICT (content): Merge conflict in README.md
 Dig, dig, dig, dig
 ```shell
 $ git add . && git commit -m "Commit a cherry pick conflict"
-[master 5b2c78e] Commit a cherry pick conflict
- 8 files changed, 10 insertions(+), 1 deletion(-)
+[master 5b5779d] Commit a cherry pick conflict
+ 8 files changed, 9 insertions(+), 1 deletion(-)
  create mode 100644 CHERRY_PICK_HEAD
  create mode 100644 MERGE_MSG
  rewrite index (100%)
  create mode 100644 logs/refs/heads/pe/cherry_picking
- create mode 100644 objects/26/567c2a8c50735bffa0ef39ddf7c6f9bbd675b3
+ create mode 100644 objects/c6/e48fff6a6838cdee9e4f72ed79a7eb746553b8
  create mode 100644 refs/heads/pe/cherry_picking
 ```
 <!-- .element: style="font-size: 0.495em" -->
@@ -1538,7 +1513,7 @@ index d371937,a28e0af..0000000
 ++=======
 + Whiskey is also a good reward.
 + [These whiskeys](whiskeys.md) are great!
-++>>>>>>> 61b15c3... Accept whiskey as reward
+++>>>>>>> 0962c48... Accept whiskey as reward
 ```
 
 as expected, the conflict looks almost the same!
@@ -1579,8 +1554,8 @@ $ git cherry-pick --continue
 ...or commit the staged changes with an existing commit message
 ```shell
 $ git commit -C pe/whiskey_is_also_an_option
-[pe/cherry_picking 4e80c6b] Accept whiskey as reward
- Date: Mon Jun 15 18:15:56 2020 +0200
+[pe/cherry_picking 2334702] Accept whiskey as reward
+ Date: Wed Jun 16 00:04:44 2021 +0200
  2 files changed, 7 insertions(+)
  create mode 100644 whiskeys.md
 ```
@@ -1590,12 +1565,12 @@ $ git commit -C pe/whiskey_is_also_an_option
 Once again...
 ```shell
 $ git add . && git commit -m "Add the cherry-pick"
-[master 29b0efe] Add the cherry-pick
- 8 files changed, 4 insertions(+), 7 deletions(-)
+[master dcca7e0] Add the cherry-pick
+ 8 files changed, 5 insertions(+), 7 deletions(-)
  delete mode 100644 CHERRY_PICK_HEAD
  delete mode 100644 MERGE_MSG
  rewrite index (100%)
- create mode 100644 objects/4e/80c6b4bed5881b2a4a5e66168bf10ca8ca6d12
+ create mode 100644 objects/23/347023d9aeff288f59cce2a2a10c171a31fee3
 ```
 <!-- .element: style="font-size: 0.505em;" -->
 
@@ -1641,7 +1616,7 @@ CONFLICT (content): Merge conflict in README.md
 ...is "slightly" more complicated:
 ```shell
 $ git add . && git commit -m "Commit a rebase conflict"
-[master 1a2d457] Commit a rebase conflict
+[master 2459514] Commit a rebase conflict
  22 files changed, 70 insertions(+), 2 deletions(-)
  create mode 100644 MERGE_MSG
  create mode 100644 REBASE_HEAD
@@ -1689,7 +1664,7 @@ index d371937,a28e0af..0000000
 ++=======
 + Whiskey is also a good reward.
 + [These whiskeys](whiskeys.md) are great!
-++>>>>>>> 61b15c3... Accept whiskey as reward
+++>>>>>>> 0962c48... Accept whiskey as reward
 ```
 The reference here is the commit's title!
 
@@ -1706,7 +1681,7 @@ $ sed -i '4d;6d;$d' README.md && git add README.md
 ```
 ```shell
 $ git commit -m 'Accept whiskey as reward'
-[detached HEAD 4e80c6b] Accept whiskey as reward
+[detached HEAD 2334702] Accept whiskey as reward
  2 files changed, 7 insertions(+)
  create mode 100644 whiskeys.md
 ```
@@ -1721,7 +1696,7 @@ $ git rebase --continue
 
 ```shell
 $ git add . && git commit -m "Add the rebase"
-[master 2711516] Add the rebase
+[master bdb5aa2] Add the rebase
  20 files changed, 5 insertions(+), 65 deletions(-)
  delete mode 100644 MERGE_MSG
  rewrite index (100%)
@@ -1830,15 +1805,15 @@ $ git switch -c pe/backups pe/rebasing
 Switched to a new branch 'pe/backups'
 $ echo "I would also love some feedback." >> README.md
 $ git commit -am "Ask for feedback"
-[pe/backups fee43a1] Ask for feedback
+[pe/backups 6f3157b] Ask for feedback
  1 file changed, 1 insertion(+)
 $ echo "Personal feedback is the best." >> README.md
 $ git commit -am "Ask for personal feedback"
-[pe/backups 4ca63e4] Ask for personal feedback
+[pe/backups 61ade96] Ask for personal feedback
  1 file changed, 1 insertion(+)
 $ echo "Helpful feedback is awarded with great coffee." >> README.md
 $ git commit -am "Trade feedback for coffee"
-[pe/backups affca42] Trade feedback for coffee
+[pe/backups 88872ec] Trade feedback for coffee
  1 file changed, 1 insertion(+)
 ```
 <!-- .element: style="font-size: 0.52em" -->
@@ -1847,22 +1822,22 @@ $ git commit -am "Trade feedback for coffee"
 <li>This is similar to the situation displayed in the comic</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
-## Clean up! 
+## Clean up!
 
 ```shell
 $ git add . && git commit -m "Add the branch of backups"
-[master 2a038c4] Add the branch of backups
- 15 files changed, 18 insertions(+), 2 deletions(-)
+[master 4d228b7] Add the branch of backups
+ 15 files changed, 17 insertions(+), 2 deletions(-)
  create mode 100644 logs/refs/heads/pe/backups
  create mode 100644 objects/34/96ebedc52ee70e2b129e315084623c7deea6a2
  create mode 100644 objects/44/09126657b95c9c83a73ac6d730ae7353b6aac1
- create mode 100644 objects/4c/a63e426c0d0e0632de59783bb88933b78ad083
  create mode 100644 objects/4f/56584f94dc324de2c2ffd66b4e145a6912f480
  create mode 100644 objects/58/ad30ba9d86b178e9c878ac031b1217d89ac4a7
- create mode 100644 objects/af/fca42f1026eadffb8129ca0ab0b01c800c6a48
+ create mode 100644 objects/61/ade96b5e99b4cdf0f58f6d5c1b0698d7435ee0
+ create mode 100644 objects/6f/3157b3ae956c8c17c3d3bc44b36ac3bb4016f0
+ create mode 100644 objects/88/872ec9db9043f7fab7e967b909290fc70be422
  create mode 100644 objects/c3/2f3348d4d95fed6ff7c80054daf3690c50e390
  create mode 100644 objects/f1/c24400178f30d7f56ac2967d2fd796968197d5
- create mode 100644 objects/fe/e43a1c5ec6ba250b8f2bb0052dcb7083d04a71
  create mode 100644 refs/heads/pe/backups
 ```
 <!-- .element: style="font-size: 0.5em" -->
@@ -1895,11 +1870,11 @@ $ git rebase -i pe/rebasing
 </aside></script></section><section  data-markdown><script type="text/template">
 Your editor now lists all the commits of your branch!
 ```text
-pick fee43a1 Ask for feedback
-pick 4ca63e4 Ask for personal feedback
-pick affca42 Trade feedback for coffee
+pick 6f3157b Ask for feedback
+pick 61ade96 Ask for personal feedback
+pick 88872ec Trade feedback for coffee
 
-# Rebase 4e80c6b..affca42 onto 4e80c6b (3 commands)
+# Rebase 2334702..88872ec onto 2334702 (3 commands)
 #
 # Commands:
 # p, pick <commit> = use commit
@@ -1969,7 +1944,7 @@ $ git help commit | grep "autosquash" -C 2
 
 ```shell
 $ git add . && git commit -m "Rebase in interactive mode"
-[master a31210f] Rebase in interactive mode
+[master cffea25] Rebase in interactive mode
  4 files changed, 4 insertions(+), 1 deletion(-)
  create mode 100644 logs/refs/heads/pe/interactive_rebase
  create mode 100644 refs/heads/pe/interactive_rebase
@@ -1997,15 +1972,6 @@ $ git add . && git commit -m "Rebase in interactive mode"
 <li>Splitting commits</li>
 <li>Combining rebase, reset, checkout and stash</li>
 <li>Keeping the holistic picture</li>
-</ul>
-</aside></script></section><section  data-markdown><script type="text/template">
-## I didn't find a decent comic for discussing distributed Git
-
-## so you only get this lowsy slide
-
-<aside class="notes"><ul>
-<li>100 internet points for the one who suggests a good comic for distributed repositories!</li>
-<li>1000 internet points for the one who makes a good comic for distributed repositories!</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
 ![Local VCS](VCS/local_vcs.png)<!-- .element: height="400px" -->
@@ -2083,7 +2049,7 @@ Development becomes *complex!*
 <li>But since workflows usually constraint the users development, it is usually better to learn the tools propperly</li>
 </ul>
 </aside></script></section><section  data-markdown><script type="text/template">
-## Advantages of *distributed* VCS 
+## Advantages of *distributed* VCS
 
 * Committing changesets can be done locally
 * Committing changesets is extremely fast
@@ -2164,7 +2130,7 @@ Aha! They're stored in the repository's configuration!
 
 ```shell
 $ git commit -m "Add Gitception as remote"
-[master 7100849] Add Gitception as remote
+[master e08310c] Add Gitception as remote
  1 file changed, 3 insertions(+)
 ```
 
@@ -2190,12 +2156,12 @@ This will download all branches and their associated objects!
 
 ```shell
 $ git add . && git commit -m "Fetch the gitception remote"
-[master 4d79136] Fetch the gitception remote
+[master b114a39] Fetch the gitception remote
  5 files changed, 3 insertions(+)
  create mode 100644 FETCH_HEAD
  create mode 100644 logs/refs/remotes/gitception/master
- create mode 100644 objects/pack/pack-3384d99cb099abff0c211a16b628d44702b65249.idx
- create mode 100644 objects/pack/pack-3384d99cb099abff0c211a16b628d44702b65249.pack
+ create mode 100644 objects/pack/pack-81dada8c2fd54b570da52ce26782f2a02e5a9392.idx
+ create mode 100644 objects/pack/pack-81dada8c2fd54b570da52ce26782f2a02e5a9392.pack
  create mode 100644 refs/remotes/gitception/master
 ```
 <!-- .element: style="font-size: 0.42em" -->
@@ -2260,7 +2226,7 @@ Branch 'pe/whiskey_is_also_an_option' set up to track remote branch 'git/unibe/r
 ...how does that work?
 ```shell
 $ git add . && git commit -m "Push the branch"
-[master 0b1c9b2] Push the branch
+[master b7704de] Push the branch
  19 files changed, 48 insertions(+)
  create mode 100644 logs/refs/remotes/github/git/unibe/repo/master
  create mode 100644 logs/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers
@@ -2290,9 +2256,9 @@ $ git add . && git commit -m "Push the branch"
 ...does it know which branches belong together?
 ```shell
 $ git show
-commit 0b1c9b25f9b0998694ef206ca2108b2edb2f558c
+commit b7704de3e6931f6ceb2c83eeb962f48fb681eea0
 Author: Pablo Escodebar <escodebar@gmail.com>
-Date:   Mon Jun 15 18:16:01 2020 +0200
+Date:   Wed Jun 16 00:04:47 2021 +0200
 
     Push the branch
 
@@ -2336,130 +2302,130 @@ index 6bc950f..4503e49 100644
 +	merge = refs/heads/git/unibe/repo/pe/whiskey_is_also_an_option
 diff --git a/logs/refs/remotes/github/git/unibe/repo/master b/logs/refs/remotes/github/git/unibe/repo/master
 new file mode 100644
-index 0000000..382aabb
+index 0000000..fe76bd6
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/master
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 136082c01f1a06f705b7414ad92b64f289831abd Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89 Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers b/logs/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers
 new file mode 100644
-index 0000000..94b366e
+index 0000000..5e46bdc
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 e6c1717b9a80f504b890dd3130febc666467063a Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 d5a1ac9cff8e5096f8a336f024395837d87cb44e Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/backups b/logs/refs/remotes/github/git/unibe/repo/pe/backups
 new file mode 100644
-index 0000000..e13cbc4
+index 0000000..415a321
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/backups
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 affca42f1026eadffb8129ca0ab0b01c800c6a48 Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 88872ec9db9043f7fab7e967b909290fc70be422 Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/cherry_picking b/logs/refs/remotes/github/git/unibe/repo/pe/cherry_picking
 new file mode 100644
-index 0000000..906d8e2
+index 0000000..d1cb2bc
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/cherry_picking
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 4e80c6b4bed5881b2a4a5e66168bf10ca8ca6d12 Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 23347023d9aeff288f59cce2a2a10c171a31fee3 Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/interactive_rebase b/logs/refs/remotes/github/git/unibe/repo/pe/interactive_rebase
 new file mode 100644
-index 0000000..e13cbc4
+index 0000000..415a321
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/interactive_rebase
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 affca42f1026eadffb8129ca0ab0b01c800c6a48 Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 88872ec9db9043f7fab7e967b909290fc70be422 Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/merging b/logs/refs/remotes/github/git/unibe/repo/pe/merging
 new file mode 100644
-index 0000000..da3c79b
+index 0000000..39ebda3
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/merging
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 d4691a8ded5b5f913c33bdf6f8c90f41caf24283 Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 4bc15468c7ca5050bf603a7f538ba8b18149d91e Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/new_branch b/logs/refs/remotes/github/git/unibe/repo/pe/new_branch
 new file mode 100644
-index 0000000..382aabb
+index 0000000..fe76bd6
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/new_branch
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 136082c01f1a06f705b7414ad92b64f289831abd Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89 Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/rebasing b/logs/refs/remotes/github/git/unibe/repo/pe/rebasing
 new file mode 100644
-index 0000000..906d8e2
+index 0000000..d1cb2bc
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/rebasing
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 4e80c6b4bed5881b2a4a5e66168bf10ca8ca6d12 Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 23347023d9aeff288f59cce2a2a10c171a31fee3 Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/logs/refs/remotes/github/git/unibe/repo/pe/whiskey_is_also_an_option b/logs/refs/remotes/github/git/unibe/repo/pe/whiskey_is_also_an_option
 new file mode 100644
-index 0000000..ab9336b
+index 0000000..e8ff956
 --- /dev/null
 +++ b/logs/refs/remotes/github/git/unibe/repo/pe/whiskey_is_also_an_option
 @@ -0,0 +1 @@
-+0000000000000000000000000000000000000000 61b15c3bc3152543b29c9069edafe85d5624bbd9 Pablo Escodebar <escodebar@gmail.com> 1592237761 +0200	update by push
++0000000000000000000000000000000000000000 0962c4822df870960e3352ddf89d7dcaea6e8eed Pablo Escodebar <escodebar@gmail.com> 1623794687 +0200	update by push
 diff --git a/refs/remotes/github/git/unibe/repo/master b/refs/remotes/github/git/unibe/repo/master
 new file mode 100644
-index 0000000..18bad1c
+index 0000000..17cb63a
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/master
 @@ -0,0 +1 @@
-+136082c01f1a06f705b7414ad92b64f289831abd
++6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89
 diff --git a/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers b/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers
 new file mode 100644
-index 0000000..945d54b
+index 0000000..17eca3b
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/add_list_of_favorite_beers
 @@ -0,0 +1 @@
-+e6c1717b9a80f504b890dd3130febc666467063a
++d5a1ac9cff8e5096f8a336f024395837d87cb44e
 diff --git a/refs/remotes/github/git/unibe/repo/pe/backups b/refs/remotes/github/git/unibe/repo/pe/backups
 new file mode 100644
-index 0000000..9f4d962
+index 0000000..e71721c
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/backups
 @@ -0,0 +1 @@
-+affca42f1026eadffb8129ca0ab0b01c800c6a48
++88872ec9db9043f7fab7e967b909290fc70be422
 diff --git a/refs/remotes/github/git/unibe/repo/pe/cherry_picking b/refs/remotes/github/git/unibe/repo/pe/cherry_picking
 new file mode 100644
-index 0000000..58a577c
+index 0000000..516ca1f
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/cherry_picking
 @@ -0,0 +1 @@
-+4e80c6b4bed5881b2a4a5e66168bf10ca8ca6d12
++23347023d9aeff288f59cce2a2a10c171a31fee3
 diff --git a/refs/remotes/github/git/unibe/repo/pe/interactive_rebase b/refs/remotes/github/git/unibe/repo/pe/interactive_rebase
 new file mode 100644
-index 0000000..9f4d962
+index 0000000..e71721c
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/interactive_rebase
 @@ -0,0 +1 @@
-+affca42f1026eadffb8129ca0ab0b01c800c6a48
++88872ec9db9043f7fab7e967b909290fc70be422
 diff --git a/refs/remotes/github/git/unibe/repo/pe/merging b/refs/remotes/github/git/unibe/repo/pe/merging
 new file mode 100644
-index 0000000..b151d21
+index 0000000..599cc53
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/merging
 @@ -0,0 +1 @@
-+d4691a8ded5b5f913c33bdf6f8c90f41caf24283
++4bc15468c7ca5050bf603a7f538ba8b18149d91e
 diff --git a/refs/remotes/github/git/unibe/repo/pe/new_branch b/refs/remotes/github/git/unibe/repo/pe/new_branch
 new file mode 100644
-index 0000000..18bad1c
+index 0000000..17cb63a
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/new_branch
 @@ -0,0 +1 @@
-+136082c01f1a06f705b7414ad92b64f289831abd
++6c2a61e3b5e1d75b929e7a5a1e06caab0a20bf89
 diff --git a/refs/remotes/github/git/unibe/repo/pe/rebasing b/refs/remotes/github/git/unibe/repo/pe/rebasing
 new file mode 100644
-index 0000000..58a577c
+index 0000000..516ca1f
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/rebasing
 @@ -0,0 +1 @@
-+4e80c6b4bed5881b2a4a5e66168bf10ca8ca6d12
++23347023d9aeff288f59cce2a2a10c171a31fee3
 diff --git a/refs/remotes/github/git/unibe/repo/pe/whiskey_is_also_an_option b/refs/remotes/github/git/unibe/repo/pe/whiskey_is_also_an_option
 new file mode 100644
-index 0000000..8ac8833
+index 0000000..db1e472
 --- /dev/null
 +++ b/refs/remotes/github/git/unibe/repo/pe/whiskey_is_also_an_option
 @@ -0,0 +1 @@
-+61b15c3bc3152543b29c9069edafe85d5624bbd9
++0962c4822df870960e3352ddf89d7dcaea6e8eed
 ```
 
 <!-- .slide: data-background="./gitception.jpg" -->
@@ -2474,10 +2440,10 @@ index 0000000..8ac8833
 
 ```shell
 $ git fetch && git push -u github refs/remotes/gitception/master:refs/heads/git/unibe/gitception
-remote: 
-remote: Create a pull request for 'git/unibe/gitception' on GitHub by visiting:        
-remote:      https://github.com/escodebar/trainings/pull/new/git/unibe/gitception        
-remote: 
+remote:
+remote: Create a pull request for 'git/unibe/gitception' on GitHub by visiting:
+remote:      https://github.com/escodebar/trainings/pull/new/git/unibe/gitception
+remote:
 To github.com:escodebar/trainings.git
  * [new branch]      gitception/master -> git/unibe/gitception
 ```
@@ -2570,10 +2536,16 @@ And then there is the [Gitflow Workflow](https://www.atlassian.com/git/tutorials
 * Discuss in a group your current workflows
 * Think of possible scenarios where these workflows may be useful
 * Discuss where and who manages project complexity with these workflows
-* Choose one of the workflows to work within your current group
-* Make a contribution to a toy repository using the chosen workflow
+* Make a pull request
+* Review the code of a pull request
+* Add comments to a pull request
 </script></section><section  data-markdown><script type="text/template">
 # Discussion
+</script></section><section  data-markdown><script type="text/template">
+## Extra task
+
+Share a public repository and implement FizzBuzz in TDD communicating only using Git commits.
+Also think of a way to establish a common workflow using only Git commits!
 </script></section><section  data-markdown><script type="text/template">
 ## Resources
 
@@ -2586,10 +2558,13 @@ And then there is the [Gitflow Workflow](https://www.atlassian.com/git/tutorials
 * [Pro Git](https://git-scm.com/book/en/v2)
 * [The thing about Git](https://tomayko.com/blog/2008/the-thing-about-git)
 * [Think like a Git](http://think-like-a-git.net/)
-* [Why Git is Better than X](http://web.archive.org/web/20090210020404id_/http://whygitisbetterthanx.com/#the-staging-area)</script></section><section  data-markdown><script type="text/template">
-## One last task
+* [Why Git is Better than X](http://web.archive.org/web/20090210020404id_/http://whygitisbetterthanx.com/#the-staging-area)
+</script></section><section  data-markdown><script type="text/template">
+## One more task!
 
-[Fill out this survey](https://docs.google.com/forms/d/e/1FAIpQLSd46Gp69B5xX_u1AcbsZJFAKqeIQAYkTGk8_s4_KBBco2iVFw/viewform?usp=sf_link)
+Please fill out this form!
+
+https://docs.google.com/forms/d/e/1FAIpQLSdkIDSkyxrEk4Uyl2Mbfan46QqhSEDdADTj27SHBAt1iv3FZA/viewform
 </script></section><section  data-markdown><script type="text/template">
 ## Thank you!
 
