@@ -36,3 +36,16 @@
 :root {
   font-family: 'pragmata';
 }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-default);
+}
+
+h1,h2,h3,h4 {
+  color: var(--color-header);
+}
+
+a {
+  color: var(--color-link);
+}
