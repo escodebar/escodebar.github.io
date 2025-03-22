@@ -1,0 +1,17 @@
+baseURL = 'https://escodebar.github.io/'
+languageCode = 'en-US'
+title = 'Pablo Vergés'
+
+[[menus.main]]
+name = 'Curriculum Vitae'
+pageRef = '/'
+weight = 10
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
