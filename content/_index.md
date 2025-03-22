@@ -82,7 +82,7 @@ Timespan
 : September 2015 to January 2016 (8 months)
 
 Projects
-: Server Monitorin, Alarming and Reporting System
+: Server Monitoring, Alarming and Reporting System
 : OpenOffice Patch
 
 ## Education
@@ -107,7 +107,7 @@ Field
 : Experimental Physics
 
 Institution
-: Universtity of Bern
+: University of Bern
 
 Timespan
 : 2014 to 2016 (2 years)
