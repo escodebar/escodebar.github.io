@@ -13,5 +13,8 @@ weight = 10
     min = "0.116.0"
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe= true
+
   [markup.highlight]
     noClasses = false

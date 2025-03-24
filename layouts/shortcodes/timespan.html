@@ -1,0 +1,21 @@
+{{ $fromRaw := .Get "from" }}
+{{ $toRaw := .Get "to" }}
+{{- $showDuration := default "true" (.Get "duration") -}}
+
+{{ $from := time (print $fromRaw "-01") }}
+{{ $to := now }}
+{{ if ne $toRaw "now" }}
+  {{ $to = time (print $toRaw "-01") }}
+{{ end }}
+
+<span class="timespan">
+  <time datetime="{{ $from.Format "2006-01" }}">{{ $from.Format "Jan 2006" }}</time>
+  to
+  <time datetime="{{ $to.Format "2006-01" }}"
+  {{ if eq $toRaw "now" }}title="{{ $to.Format "Jan 2006" }}"{{ end }}>
+  {{ if eq $toRaw "now" }}present{{ else }}{{ $to.Format "Jan 2006" }}{{ end }}
+  </time>
+  {{- if $showDuration -}}
+    ({{ partial "duration.html" (dict "from" $from "to" $to) | safeHTML }})
+  {{- end -}}
+</span>

@@ -4,158 +4,147 @@ date = 2025-03-20T12:00:00Z
 draft = false
 +++
 
-# Pablo Vergés
+{{% section class="manifesto" %}}
+Empathy the key,  
+Versatility my strength,  
+Leadership my goal.
+{{% /section %}}
 
-Profile
-: Empathy the key,  
-  Versatility my strength,  
-  Leadership my goal.
+{{% address email="pablo.verges@gmail.com" tel="+41 76 284 48 38" %}}
+Mellingerstrasse 18  
+CH-5400 Baden
+{{% /address %}}
 
-Address
-: Mellingerstrasse 18, CH-5400 Baden
+{{% section class="skills-and-competences" %}}
+## Skills and Competences
+- Fostering a Positive and Productive Work Environment
+- Software Architecture, Development and Operations
+- Data-Driven Decision Making
+- Interest-Based Negotiation
+- Meeting Facilitation
+- Wardley Mapping
+- Cynefin
+- Empathy
+{{% /section %}}
 
-E-Mail
-: [pablo.verges@gmail.com](mailto:pablo.verges@gmail.com)
+{{% section class="languages" %}}
+## Languages
+- Spanish
+- English
+- Italian
+- German
+- French
+{{% /section %}}
 
-Phone Number
-: [+41 76 284 48 38](tel:+41762844838)
-
-Skills and Competences
-: Fostering a Positive and Productive Work Environment
-: Software Architecture, Development and Operations
-: Data-Driven Decision Making
-: Interest-Based Negotiation
-: Meeting Facilitation
-: Wardley Mapping
-: Cynefin
-: Empathy
-
-Languages
-: Spanish
-: English
-: Italian
-: German
-: French
-
+{{% section class="professional-experience" %}}
 ## Professional Experience
 
 ### House of Test GmbH
+{{% timespan from="2023-02" to="now" %}}
 
-Timespan
-: February 2023 to today
-
-Projects
-: CI Pipeline for a System of Systems
-: Test Bench for Embedded Systems
+#### Projects
+- Heating system temperature calibration testbench
+- Test-Lab hardware reservation and setup system
+- Concourse CI setup for a multirepo product
+- Thrift Server Pytest plugin for mocking
+- Gherkin and Behave rules for Bazel
+- Environment definitions in Nix
+- Model factories library
 
 ### DECTRIS AG
+{{% timespan from="2018-09" to="2022-10" %}}
 
-Timespan
-: September 2018 to October 2022 (4 years 1 month)
-
-Projects
-: Detector Calibration Reimplementation
-: Detector Calibration Test Environment
-: Proposal for Data Democratization
-: Infrastructure for ERP Solution
-: Data Warehouse Proof of Concept
-: Git and Collaboration Training
-: Detector User Interface
-: ERP Solution Upgrade
+#### Projects
+- Detector Calibration Reimplementation
+- Detector Calibration Test Environment
+- Proposal for Data Democratization
+- Infrastructure for ERP Solution
+- Data Warehouse Proof of Concept
+- Git and Collaboration Training
+- Detector User Interface
+- ERP Solution Upgrade
 
 ### 4teamwork AG
+{{% timespan from="2017-01" to="2018-07" %}}
 
-Timespan
-: January 2017 to July 2018 (1 year 7 months)
-
-Projects
-: Event Calendar and Integration to Web Application
-: Inspection Administration and Reporting Software
-: Web Application for Substitution Management
-: Meeting Assistance Web Application
-: Boilerplate for Django projects
-: Contributions to opengever.core
+#### Projects
+- Event Calendar and Integration to Web Application
+- Inspection Administration and Reporting Software
+- Web Application for Substitution Management
+- Meeting Assistance Web Application
+- Boilerplate for Django projects
+- Contributions to opengever.core
 
 ### Adfinis SyGroup AG
+{{% timespan from="2015-09" to="2016-01" %}}
 
-Timespan
-: September 2015 to January 2016 (8 months)
+#### Projects
+- Server Monitoring, Alarming and Reporting System
+- OpenOffice Patch
+{{% /section %}}
 
-Projects
-: Server Monitoring, Alarming and Reporting System
-: OpenOffice Patch
-
+{{% section class="education" %}}
 ## Education
 
-### Advanced Trainings
-
-Expand the Box
-: Possibility Management, 2022
-
-Radical Collaboration
-: Euforia, 2020
-
-Python Programming
-: Wesleyan University, 2017
-
-Machine Learning
-: Stanford University, 2016
-
-### MSc in Physics
+### University of Bern
+{{% timespan from="2010-09" to="2016-09" %}}
 
 Field
 : Experimental Physics
 
-Institution
-: University of Bern
-
-Timespan
-: 2014 to 2016 (2 years)
+Diploma
+: Master of Sciece
 
 Thesis
 : SiPM Gain Calibration for the Scintillating Cosmic Ray Tracker
 
-### BSc in Physics
+<!-- split -->
 
 Field
 : Physics
 
-Minor
-: Mathematics
-
-Institution
-: University of Bern
-
-Timespan
-: 2010 to 2014 (4 years)
+Diploma
+: Bachelor of Science
 
 Thesis
 : Statistical Interpretation of Search Results in the ATLAS Experiment
 
-### Computer Science (no diploma)
+Minor
+: Mathematics (60 ECTS)
 
-Institution
-: Hochschule für Technik Rapperswil
+### Hochschule für Technik Rapperswil
+{{% timespan from="2007-09" to="2008-09" %}}
 
-Timespan
-: 2007 to 2008 (2 years)
+Field
+: Computer Science
 
-Institution
-: École Polytechnique Fédérale de Lausanne
+Diploma
+: None
 
-Timespan
-: 2004 to 2006 (2 years)
+### École Polytechnique Fédérale de Lausanne
+{{% timespan from="2004-09" to="2006-09" %}}
 
-### Maturität
+Field
+: Computer Science
 
-Institution
-: Gymnasium Interlaken
+Diploma
+: None
 
-Timespan
-: 2001 to 2004 (3 years)
+### Gymnasium Interlaken
+{{% timespan from="2001-08" to="2004-07" %}}
 
+Diploma
+: Maturität
+
+### Advanced Trainings
+- Expand the Box (Possibility Management, 2022)
+- Radical Collaboration (Euforia, 2020)
+- Python Programming (Wesleyan University, 2017)
+- Machine Learning (Stanford University, 2016)
+{{% /section %}}
+
+{{% section class="technology-stack" %}}
 ## Technology Stack
-
 - marshmallow
 - Mathematica
 - Javascript
@@ -220,3 +209,4 @@ Timespan
 - Zsh
 - Go
 - C
+{{% /section %}}

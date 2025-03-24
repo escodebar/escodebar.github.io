@@ -1,0 +1,13 @@
+<address>
+  <p>
+    {{- .Inner | markdownify -}}
+  </p>
+
+  {{- if .Get "email" -}}
+  <a href="mailto:{{- .Get "email" -}}">{{- .Get "email" -}}</a>
+  {{- end -}}
+  {{- if .Get "tel" -}}
+  <br>
+  <a href="tel:{{- .Get "tel" -}}">{{- .Get "tel" -}}</a>
+  {{- end -}}
+</address>

@@ -1,0 +1,40 @@
+{{- $from := time .from -}}
+{{- $to := time .to -}}
+
+{{- $fromYear := $from.Year -}}
+{{- $fromMonth := $from.Month -}}
+{{- $toYear := $to.Year -}}
+{{- $toMonth := $to.Month -}}
+
+{{- $years := sub $toYear $fromYear -}}
+{{- $months := add (sub $toMonth $fromMonth) 1 -}}
+
+{{- if lt $months 0 -}}
+  {{- $years = sub $years 1 -}}
+  {{- $months = add $months 12 -}}
+{{- end -}}
+
+{{- $durationParts := slice -}}
+{{- if gt $years 0 -}}
+  {{- $durationParts = $durationParts | append (printf "%d year%s" $years (cond (eq $years 1) "" "s")) -}}
+{{- end -}}
+{{- if gt $months 0 -}}
+  {{- $durationParts = $durationParts | append (printf "%d month%s" $months (cond (eq $months 1) "" "s")) -}}
+{{- end -}}
+{{- $duration := delimit $durationParts ", " -}}
+{{- if eq $duration "" -}}
+  {{- $duration = "0 months" -}}
+{{- end -}}
+
+{{- $iso := "P" -}}
+{{- if gt $years 0 -}}
+  {{- $iso = printf "%s%dY" $iso $years -}}
+{{- end -}}
+{{- if gt $months 0 -}}
+  {{- $iso = printf "%s%dM" $iso $months -}}
+{{- end -}}
+{{- if eq $iso "P" -}}
+  {{- $iso = "P0M" -}}
+{{- end -}}
+
+<data value="{{ $iso }}">{{- $duration -}}</data>
