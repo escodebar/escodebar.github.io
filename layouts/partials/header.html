@@ -3,17 +3,14 @@
 </h1>
 
 <section class="manifesto">
-  Empathy the key,<br>
-  Versatility my strength,<br>
-  Leadership my goal.
+  {{ .Params.manifesto | markdownify }}
 </section>
 
 <address class="contact">
   <p>
-    Mellingerstrasse 18<br>
-    CH-5400 Baden
+    {{ .Params.address | markdownify }}
   </p>
-  <a href="mailto:pablo.verges@gmail.com">pablo.verges@gmail.com</a>
+  <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
   <br>
-  <a href="tel:+41 76 284 48 38">+41 76 284 48 38</a>
+  <a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a>
 </address>

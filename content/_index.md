@@ -2,6 +2,17 @@
 title = 'Pablo Vergés'
 date = 2025-03-20T12:00:00Z
 draft = false
+email = 'hello@pablo.codes'
+phone = '+41 76 284 48 38'
+manifesto = """
+  Empathy the key,  
+  Versatility my strength,  
+  Leadership my goal.
+"""
+address = """
+  Mellingerstrasse 18  
+  CH-5400 Baden
+"""
 +++
 
 {{% section class="professional-experience" %}}
