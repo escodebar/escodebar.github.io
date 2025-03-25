@@ -4,17 +4,6 @@ date = 2025-03-20T12:00:00Z
 draft = false
 +++
 
-{{% section class="manifesto" %}}
-Empathy the key,  
-Versatility my strength,  
-Leadership my goal.
-{{% /section %}}
-
-{{% address email="pablo.verges@gmail.com" tel="+41 76 284 48 38" %}}
-Mellingerstrasse 18  
-CH-5400 Baden
-{{% /address %}}
-
 {{% section class="skills-and-competences" %}}
 ## Skills and Competences
 - Fostering a Positive and Productive Work Environment
