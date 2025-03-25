@@ -1,0 +1,3 @@
+<article{{ with .Get "class" }} class="{{ . }}"{{ end }}{{ with .Get "role" }} data-role="{{ . }}"{{ end }}>
+  {{ .Inner | markdownify }}
+</article>

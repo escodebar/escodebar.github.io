@@ -39,6 +39,7 @@ CH-5400 Baden
 {{% section class="professional-experience" %}}
 ## Professional Experience
 
+{{% article class="experience" %}}
 ### House of Test GmbH
 {{% timespan from="2023-02" to="now" %}}
 
@@ -50,7 +51,9 @@ CH-5400 Baden
 - Gherkin and Behave rules for Bazel
 - Environment definitions in Nix
 - Model factories library
+{{% /article %}}
 
+{{% article class="experience" %}}
 ### DECTRIS AG
 {{% timespan from="2018-09" to="2022-10" %}}
 
@@ -63,7 +66,9 @@ CH-5400 Baden
 - Git and Collaboration Training
 - Detector User Interface
 - ERP Solution Upgrade
+{{% /article %}}
 
+{{% article class="experience" %}}
 ### 4teamwork AG
 {{% timespan from="2017-01" to="2018-07" %}}
 
@@ -74,13 +79,16 @@ CH-5400 Baden
 - Meeting Assistance Web Application
 - Boilerplate for Django projects
 - Contributions to opengever.core
+{{% /article %}}
 
+{{% article class="experience" %}}
 ### Adfinis SyGroup AG
 {{% timespan from="2015-09" to="2016-01" %}}
 
 #### Projects
 - Server Monitoring, Alarming and Reporting System
 - OpenOffice Patch
+{{% /article %}}
 {{% /section %}}
 
 {{% section class="education" %}}
