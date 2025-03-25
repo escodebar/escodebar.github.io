@@ -94,7 +94,7 @@ CH-5400 Baden
 {{% section class="education" %}}
 ## Education
 
-### University of Bern
+### Universität of Bern
 {{% timespan from="2010-09" to="2016-09" %}}
 
 Field
