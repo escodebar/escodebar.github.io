@@ -153,56 +153,117 @@ Diploma
 
 {{% section class="technology-stack" %}}
 ## Technology Stack
+- Django REST Framework
+- Apache HTTP Server
+- reStructuredText
+- GitHub Actions
+- Elasticsearch
+- Mocks Server
+- Factory Boy
 - marshmallow
 - Mathematica
+- Confluence
 - Javascript
 - Playwright
 - PostgreSQL
 - Vue Router
 - BitBucket
+- Bitwarden
 - Concourse
+- FreezeGun
+- Gitlab CI
+- kustomize
 - PostgREST
+- Vimscript
+- AsciiDoc
+- Beer CSS
+- Cherokee
+- Cucumber
+- Homebrew
 - InfluxDB
+- Lighttpd
+- Markdown
 - requests
+- Starlark
+- Argo CD
 - Cypress
 - Gnuplot
 - Grafana
 - Jupyter
+- MariaDB
 - OpenAPI
+- Postman
+- PyCharm
+- ripgrep
+- VS Code
 - vuetify
+- direnv
 - Django
+- docopt
 - Docker
 - GitHub
 - GitLab
 - jQuery
 - Kibana
-- octane
+- Matlab
+- nodenv
+- Octane
 - Octave
 - Plotly
 - Podman
+- Poetry
 - pytest
 - Python
+- ranger
+- screen
 - Sqitch
+- Skopeo
+- Thrift
+- Vitest
 - Vue.js
 - ZeroMQ
 - axios
 - Bazel
+- Caddy
 - LaTeX
 - Linux
 - MacOS
 - MySQL
+- Nginx
 - NixOS
 - Plone
+- pyenv
+- PyJWT
+- React
+- Vault
+- XHTML
 - Bash
+- bats
+- BPMN
+- Chai
+- curl
+- fasd
 - gRPC
+- Helm
 - HTML
 - Hugo
+- Jest
+- Jira
+- JSON
+- jose
+- Hugo
 - Make
+- Marp
+- Miro
 - Ruby
 - Rust
 - SCSS
+- SOAP
+- SOPS
 - Tmux
-- Toml
+- TOML
+- tree
+- Vite
 - Vuex
 - YAML
 - yarn
@@ -211,11 +272,15 @@ Diploma
 - CSS
 - Git
 - K8s
+- MSW
 - Nix
 - npm
 - PHP
+- SQL
 - Vim
+- XML
 - Zsh
 - Go
+- jq
 - C
 {{% /section %}}
