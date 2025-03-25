@@ -4,27 +4,6 @@ date = 2025-03-20T12:00:00Z
 draft = false
 +++
 
-{{% section class="skills-and-competences" %}}
-## Skills and Competences
-- Fostering a Positive and Productive Work Environment
-- Software Architecture, Development and Operations
-- Data-Driven Decision Making
-- Interest-Based Negotiation
-- Meeting Facilitation
-- Wardley Mapping
-- Cynefin
-- Empathy
-{{% /section %}}
-
-{{% section class="languages" %}}
-## Languages
-- Spanish
-- English
-- Italian
-- German
-- French
-{{% /section %}}
-
 {{% section class="professional-experience" %}}
 ## Professional Experience
 
@@ -80,68 +59,32 @@ draft = false
 {{% /article %}}
 {{% /section %}}
 
-{{% section class="education" %}}
-## Education
+{{% section class="skills" %}}
+## Skills
 
-### Universität of Bern
-{{% timespan from="2010-09" to="2016-09" %}}
+{{% article class="Competences" %}}
+### Competences
+- Fostering a Positive and Productive Work Environment
+- Software Architecture, Development and Operations
+- Data-Driven Decision Making
+- Interest-Based Negotiation
+- Meeting Facilitation
+- Wardley Mapping
+- Cynefin
+- Empathy
+{{% /article %}}
 
-Field
-: Experimental Physics
+{{% article class="languages" %}}
+### Languages
+- Spanish
+- English
+- Italian
+- German
+- French
+{{% /article %}}
 
-Diploma
-: Master of Sciece
-
-Thesis
-: SiPM Gain Calibration for the Scintillating Cosmic Ray Tracker
-
-<!-- split -->
-
-Field
-: Physics
-
-Diploma
-: Bachelor of Science
-
-Thesis
-: Statistical Interpretation of Search Results in the ATLAS Experiment
-
-Minor
-: Mathematics (60 ECTS)
-
-### Hochschule für Technik Rapperswil
-{{% timespan from="2007-09" to="2008-09" %}}
-
-Field
-: Computer Science
-
-Diploma
-: None
-
-### École Polytechnique Fédérale de Lausanne
-{{% timespan from="2004-09" to="2006-09" %}}
-
-Field
-: Computer Science
-
-Diploma
-: None
-
-### Gymnasium Interlaken
-{{% timespan from="2001-08" to="2004-07" %}}
-
-Diploma
-: Maturität
-
-### Advanced Trainings
-- Expand the Box (Possibility Management, 2022)
-- Radical Collaboration (Euforia, 2020)
-- Python Programming (Wesleyan University, 2017)
-- Machine Learning (Stanford University, 2016)
-{{% /section %}}
-
-{{% section class="technology-stack" %}}
-## Technology Stack
+{{% article class="technology-stack" %}}
+### Technology Stack
 - Django REST Framework
 - Apache HTTP Server
 - reStructuredText
@@ -272,4 +215,75 @@ Diploma
 - Go
 - jq
 - C
+{{% /article %}}
+{{% /section %}}
+
+{{% section class="education" %}}
+## Education
+
+{{% article class="unibe" %}}
+### Universität of Bern
+{{% timespan from="2010-09" to="2016-09" %}}
+
+Field
+: Experimental Physics
+
+Diploma
+: Master of Sciece
+
+Thesis
+: SiPM Gain Calibration for the Scintillating Cosmic Ray Tracker
+
+<!-- split -->
+
+Field
+: Physics
+
+Diploma
+: Bachelor of Science
+
+Thesis
+: Statistical Interpretation of Search Results in the ATLAS Experiment
+
+Minor
+: Mathematics (60 ECTS)
+{{% /article %}}
+
+{{% article class="hsr" %}}
+### Hochschule für Technik Rapperswil
+{{% timespan from="2007-09" to="2008-09" %}}
+
+Field
+: Computer Science
+
+Diploma
+: None
+{{% /article %}}
+
+{{% article class="epfl" %}}
+### École Polytechnique Fédérale de Lausanne
+{{% timespan from="2004-09" to="2006-09" %}}
+
+Field
+: Computer Science
+
+Diploma
+: None
+{{% /article %}}
+
+{{% article class="gyminterlaken" %}}
+### Gymnasium Interlaken
+{{% timespan from="2001-08" to="2004-07" %}}
+
+Diploma
+: Maturität
+{{% /article %}}
+
+{{% article class="advanced-trainings" %}}
+### Advanced Trainings
+- Expand the Box (Possibility Management, 2022)
+- Radical Collaboration (Euforia, 2020)
+- Python Programming (Wesleyan University, 2017)
+- Machine Learning (Stanford University, 2016)
+{{% /article %}}
 {{% /section %}}

@@ -1,0 +1,30 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "manifesto header"
+    "contact   header";
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+header .me {
+  grid-area: header;
+  background-image: url('/pablo.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px 40px;
+  text-align: right;
+  margin: 0;
+}
+
+header .manifesto {
+  grid-area: manifesto;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+header .contact {
+  grid-area: contact;
+}
