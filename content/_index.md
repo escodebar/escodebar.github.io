@@ -176,6 +176,7 @@ Diploma
 - GitLab
 - jQuery
 - Kibana
+- octane
 - Octave
 - Plotly
 - Podman
