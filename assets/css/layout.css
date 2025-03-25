@@ -4,27 +4,113 @@ header {
   grid-template-areas:
     "manifesto header"
     "contact   header";
-  gap: 1rem;
-  align-items: start;
-  margin-bottom: 2rem;
+  align-items: stretch;
 }
 
 header .me {
   grid-area: header;
-  background-image: url('/pablo.jpg');
+  background-image: url('/img/pablo.jpg');
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 40px 40px;
-  text-align: right;
+  background-position: right center;
+  background-size: auto 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
   margin: 0;
+}
+
+header .me::after {
+  content: '';
+  display: block;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  flex-shrink: 0;
 }
 
 header .manifesto {
   grid-area: manifesto;
   font-style: italic;
-  line-height: 1.4;
 }
 
 header .contact {
   grid-area: contact;
+}
+
+main .professional-experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .professional-experience #professional-experience {
+  grid-column: 1 / -1;
+}
+
+main .skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header       header"
+    "competences  languages"
+    "stack        stack";
+}
+
+main .skills #skills {
+    grid-area: header;
+}
+
+main .skills .competences {
+  grid-area: competences;
+}
+
+main .skills .languages {
+  grid-area: languages;
+}
+
+main .skills .technology-stack {
+  grid-area: stack;
+}
+
+main .skills .technology-stack ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main .skills .technology-stack li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+main .skills .technology-stack li:not(:last-child)::after {
+  content: ", ";
+}
+
+main .education {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header             header"
+    "unibe              hsr"
+    "unibe              epfl"
+    "advanced-trainings advanced-trainings";
+}
+
+main .education #education {
+    grid-area: header;
+}
+
+main .education .unibe {
+  grid-area: unibe;
+}
+
+main .education .hsr {
+  grid-area: hsr;
+}
+
+main .education .epfl {
+  grid-area: epfl;
+}
+
+main .education .advanced-trainings {
+  grid-area: advanced-trainings;
 }

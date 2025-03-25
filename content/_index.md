@@ -1,5 +1,5 @@
 +++
-title = 'Curriculum Vitae'
+title = 'Pablo Vergés'
 date = 2025-03-20T12:00:00Z
 draft = false
 +++
@@ -62,7 +62,7 @@ draft = false
 {{% section class="skills" %}}
 ## Skills
 
-{{% article class="Competences" %}}
+{{% article class="competences" %}}
 ### Competences
 - Fostering a Positive and Productive Work Environment
 - Software Architecture, Development and Operations
@@ -269,14 +269,6 @@ Field
 
 Diploma
 : None
-{{% /article %}}
-
-{{% article class="gyminterlaken" %}}
-### Gymnasium Interlaken
-{{% timespan from="2001-08" to="2004-07" %}}
-
-Diploma
-: Maturität
 {{% /article %}}
 
 {{% article class="advanced-trainings" %}}
