@@ -1,5 +1,5 @@
 +++
-title = 'Pablo Vergés'
+title = 'Curriculum'
 date = 2025-03-20T12:00:00Z
 draft = false
 email = 'hello@pablo.codes'
@@ -10,6 +10,7 @@ manifesto = """
   Leadership my goal.
 """
 address = """
+  **Pablo Vergés**
   Mellingerstrasse 18  
   CH-5400 Baden
 """

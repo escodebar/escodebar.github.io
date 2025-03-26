@@ -12,5 +12,5 @@
   </p>
   <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
   <br>
-  <a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a>
+  <a href="tel:{{ replace .Params.phone " " "" }}">{{ .Params.phone }}</a>
 </address>
