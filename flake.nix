@@ -40,7 +40,7 @@
           default = pkgs.stdenv.mkDerivation {
             version = "1.0.0";
             pname = "pablo.codes";
-            src = ./.;
+            src = sources;
             buildInputs = with pkgs; [
               hugo
             ];
