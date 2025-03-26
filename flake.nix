@@ -14,7 +14,20 @@
         "x86_64-darwin"
         "x86_64-linux"
       ];
-      perSystem = {pkgs, ...}: {
+      perSystem = {pkgs, ...}: let
+        sources = ./.;
+      in {
+        checks = {
+          formatting =
+            pkgs.runCommand "nix-format-check" {
+              buildInputs = [
+                pkgs.alejandra
+              ];
+            } ''
+              alejandra --quiet --check ${sources}
+              touch $out
+            '';
+        };
         devShells = {
           default = pkgs.mkShell {
             packages = with pkgs; [
@@ -22,6 +35,7 @@
             ];
           };
         };
+        formatter = pkgs.alejandra;
       };
     };
 }
