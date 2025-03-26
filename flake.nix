@@ -36,6 +36,32 @@
           };
         };
         formatter = pkgs.alejandra;
+        packages = {
+          default = pkgs.stdenv.mkDerivation {
+            version = "1.0.0";
+            pname = "pablo.codes";
+            src = ./.;
+            buildInputs = with pkgs; [
+              hugo
+            ];
+            buildPhase = ''
+              hugo \
+                --gc \
+                --baseURL "https://pablo.codes/"
+            '';
+            installPhase = ''
+              mkdir -p $out
+              cp -R public/* $out/
+            '';
+            doCheck = true;
+            checkInputs = with pkgs; [
+              validator-nu
+            ];
+            checkPhase = ''
+              vnu --skip-non-html public || exit 1
+            '';
+          };
+        };
       };
     };
 }
