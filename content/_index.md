@@ -23,7 +23,7 @@ address = """
 ### House of Test GmbH
 {{% timespan from="2023-02" to="now" %}}
 
-#### Projects
+#### Projects {#projects-hot}
 - Heating system temperature calibration testbench
 - Test-Lab hardware reservation and setup system
 - Concourse CI setup for a multirepo product
@@ -37,7 +37,7 @@ address = """
 ### DECTRIS AG
 {{% timespan from="2018-09" to="2022-10" %}}
 
-#### Projects
+#### Projects {#projects-dectris}
 - Detector Calibration Reimplementation
 - Detector Calibration Test Environment
 - Proposal for Data Democratization
@@ -52,7 +52,7 @@ address = """
 ### 4teamwork AG
 {{% timespan from="2017-01" to="2018-07" %}}
 
-#### Projects
+#### Projects {#projects-4tw}
 - Event Calendar and Integration to Web Application
 - Inspection Administration and Reporting Software
 - Web Application for Substitution Management
@@ -65,7 +65,7 @@ address = """
 ### Adfinis SyGroup AG
 {{% timespan from="2015-09" to="2016-01" %}}
 
-#### Projects
+#### Projects {#projects-adsy}
 - Server Monitoring, Alarming and Reporting System
 - OpenOffice Patch
 {{% /article %}}

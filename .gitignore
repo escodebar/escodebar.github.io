@@ -1,3 +1,4 @@
 .direnv
 .hugo_build.lock
 public
+result

@@ -1,3 +1,8 @@
+header .manifesto {
+  font-style: italic;
+  margin: 0;
+}
+
 header .me {
   background-image: url('/img/pablo.jpg');
   background-repeat: no-repeat;
