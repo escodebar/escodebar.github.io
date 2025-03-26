@@ -1,30 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
+{{ $cssFiles := resources.Match "css/*.css" }}
+{{ range $cssFiles }}
+  {{ if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
+  {{ else }}
+    {{ with . | minify | fingerprint }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
-{{- with resources.Get "css/colorscheme.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
-{{- with resources.Get "css/layout.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

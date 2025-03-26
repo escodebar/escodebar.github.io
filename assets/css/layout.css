@@ -9,30 +9,10 @@ header {
 
 header .me {
   grid-area: header;
-  background-image: url('/img/pablo.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto 100%;
-  display: flex;
-  align-items: center;
-  text-indent: -9999px;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-header .me::after {
-  content: '';
-  display: block;
-  aspect-ratio: 1 / 1;
-  height: 100%;
-  flex-shrink: 0;
 }
 
 header .manifesto {
   grid-area: manifesto;
-  font-style: italic;
 }
 
 header .contact {
@@ -48,6 +28,12 @@ main .professional-experience #professional-experience {
   grid-column: 1 / -1;
 }
 
+@media (max-width: 768px) {
+  main .professional-experience {
+    grid-template-columns: 1fr;
+  }
+}
+
 main .skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -57,8 +43,19 @@ main .skills {
     "stack        stack";
 }
 
+@media (max-width: 768px) {
+  main .skills {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "competences"
+      "languages"
+      "stack";
+  }
+}
+
 main .skills #skills {
-    grid-area: header;
+  grid-area: header;
 }
 
 main .skills .competences {
@@ -98,8 +95,20 @@ main .education {
     "advanced-trainings advanced-trainings";
 }
 
+@media (max-width: 768px) {
+  main .education {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "unibe"
+      "hsr"
+      "epfl"
+      "advanced-trainings";
+  }
+}
+
 main .education #education {
-    grid-area: header;
+  grid-area: header;
 }
 
 main .education .unibe {
