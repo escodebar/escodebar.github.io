@@ -24,7 +24,7 @@ address = """
 {{% timespan from="2023-02" to="now" %}}
 
 #### Projects {#projects-hot}
-- Heating system temperature calibration testbench
+- Heating system temperature calibration test bench
 - Test-Lab hardware reservation and setup system
 - Concourse CI setup for a multirepo product
 - Thrift Server Pytest plugin for mocking
@@ -78,7 +78,7 @@ address = """
 ### Competences
 - Fostering a Positive and Productive Work Environment
 - Software Architecture, Development and Operations
-- Data-Driven Decision Making
+- Data-Driven Decision-Making
 - Interest-Based Negotiation
 - Meeting Facilitation
 - Wardley Mapping
@@ -107,15 +107,15 @@ address = """
 - marshmallow
 - Mathematica
 - Confluence
-- Javascript
+- JavaScript
 - Playwright
 - PostgreSQL
 - Vue Router
-- BitBucket
+- Bitbucket
 - Bitwarden
 - Concourse
 - FreezeGun
-- Gitlab CI
+- GitLab CI
 - kustomize
 - PostgREST
 - Vimscript
@@ -171,7 +171,7 @@ address = """
 - Caddy
 - LaTeX
 - Linux
-- MacOS
+- macOS
 - MySQL
 - Nginx
 - NixOS
@@ -241,7 +241,7 @@ Field
 : Experimental Physics
 
 Diploma
-: Master of Sciece
+: Master of Science
 
 Thesis
 : SiPM Gain Calibration for the Scintillating Cosmic Ray Tracker
