@@ -1,0 +1,21 @@
+{{- $file := .Get "file" | default "data/stack.json" -}}
+{{- $class := .Get "class" | default "technology-stack" -}}
+{{- $id := .Get "id" | default "technology-stack" -}}
+{{- $stack := resources.Get $file -}}
+{{- if not $stack }}
+  <p>Could not load tech stack</p>
+{{- else }}
+  <article class="{{- $class -}}">
+    <h3 id="{{- $id -}}">Technology Stack</h3>
+  {{- $stack = $stack | transform.Unmarshal -}}
+  {{- if $stack }}
+    <ul class="stack">
+      {{- range sort $stack "name" "asc" }}
+        <li>{{ .name }}</li>
+      {{- end }}
+    </ul>
+  {{- else }}
+    <p>Could not load tech stack</p>
+  {{- end }}
+  </article>
+{{- end }}

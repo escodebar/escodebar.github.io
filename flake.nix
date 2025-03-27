@@ -19,13 +19,15 @@
       in {
         checks = {
           formatting =
-            pkgs.runCommand "nix-format-check" {
-              buildInputs = [
-                pkgs.alejandra
+            pkgs.runCommand "format-check" {
+              buildInputs = with pkgs; [
+                alejandra
+                nodePackages.prettier
               ];
             } ''
-              alejandra --quiet --check ${sources}
-              touch $out
+              alejandra --quiet --check ${sources} \
+                && prettier ${sources} --check \
+                && touch $out
             '';
         };
         devShells = {
