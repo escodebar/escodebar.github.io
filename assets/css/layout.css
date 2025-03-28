@@ -19,6 +19,21 @@ header .contact {
   grid-area: contact;
 }
 
+main .roles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main .roles li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+main .roles li:not(:last-child)::after {
+  content: ", ";
+}
+
 main .professional-experience {
   display: grid;
   grid-template-columns: 1fr 1fr;
