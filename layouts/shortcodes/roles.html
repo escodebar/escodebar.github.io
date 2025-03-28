@@ -1,0 +1,9 @@
+{{- $class := .Get "class" | default "roles" -}}
+{{- $id := .Get "id" | default "roles" -}}
+{{- $roles := resources.Get (.Get "file" | default "data/roles.json") | transform.Unmarshal -}}
+
+<ul>
+{{- range sort $roles "name" }}
+  <li data-role="{{- .key -}}">{{ .name }}</li>
+{{- end }}
+</ul>

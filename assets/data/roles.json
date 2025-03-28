@@ -1,0 +1,10 @@
+[
+    {"name": "Software Engineer", "key": "dev"},
+    {"name": "DevEx Engineer", "key": "dx-eng"},
+    {"name": "Scientist", "key": "sci"},
+    {"name": "Speaker", "key": "speaker"},
+    {"name": "System Engineer", "key": "sys-eng"},
+    {"name": "System Administrator", "key": "sysadm"},
+    {"name": "Test Engineer", "key": "test-eng"},
+    {"name": "Test Manager", "key": "test-mgr"}
+]

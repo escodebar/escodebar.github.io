@@ -16,6 +16,12 @@ address = """
 """
 +++
 
+{{% section class="roles" %}}
+## Roles
+
+{{% roles %}}
+{{% /section %}}
+
 {{% section class="professional-experience" %}}
 ## Professional Experience
 
