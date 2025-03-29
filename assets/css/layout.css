@@ -35,21 +35,6 @@ main .roles li:not(:last-child)::after {
   margin-right: 0.25em;
 }
 
-main .professional-experience {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-main .professional-experience #professional-experience {
-  grid-column: 1 / -1;
-}
-
-@media (max-width: 768px) {
-  main .professional-experience {
-    grid-template-columns: 1fr;
-  }
-}
-
 main .skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -102,44 +87,19 @@ main .skills .technology-stack li:not(:last-child)::after {
   margin-right: 0.25em;
 }
 
-main .education {
+main .education dl {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "header             header"
-    "unibe              hsr"
-    "unibe              epfl"
-    "advanced-trainings advanced-trainings";
+  grid-template-columns: max-content 1fr;
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  align-items: start;
 }
 
-@media (max-width: 768px) {
-  main .education {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "unibe"
-      "hsr"
-      "epfl"
-      "advanced-trainings";
-  }
+main .education dt {
+  font-weight: bold;
+  margin: 0;
 }
 
-main .education #education {
-  grid-area: header;
-}
-
-main .education .unibe {
-  grid-area: unibe;
-}
-
-main .education .hsr {
-  grid-area: hsr;
-}
-
-main .education .epfl {
-  grid-area: epfl;
-}
-
-main .education .advanced-trainings {
-  grid-area: advanced-trainings;
+main .education dd {
+  margin: 0;
 }
