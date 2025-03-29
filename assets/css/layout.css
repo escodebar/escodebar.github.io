@@ -31,7 +31,8 @@ main .roles li {
 }
 
 main .roles li:not(:last-child)::after {
-  content: ", ";
+  content: ",";
+  margin-right: 0.25em;
 }
 
 main .professional-experience {
@@ -97,7 +98,8 @@ main .skills .technology-stack li {
 }
 
 main .skills .technology-stack li:not(:last-child)::after {
-  content: ", ";
+  content: ",";
+  margin-right: 0.25em;
 }
 
 main .education {
