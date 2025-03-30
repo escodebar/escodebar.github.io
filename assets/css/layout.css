@@ -112,6 +112,27 @@ main .skills .technology-stack li:not(:last-child)::after {
   margin-right: 0.25em;
 }
 
+main .education article:not(.advanced-trainings) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "institution  timespan"
+  "details      details";
+}
+
+main .education article h3 {
+  grid-area: institution;
+}
+
+main .education article .timespan {
+  grid-area: timespan;
+  align-self: center;
+}
+
+main .education article .details {
+  grid-area: details;
+}
+
 main .education dl {
   display: grid;
   grid-template-columns: max-content 1fr;

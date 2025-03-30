@@ -136,6 +136,7 @@ address = """
 ### Universität of Bern
 {{% timespan from="2010-09" to="2016-09" %}}
 
+{{% section class="details" %}}
 Field
 : Experimental Physics
 
@@ -158,28 +159,33 @@ Thesis
 
 Minor
 : Mathematics (60 ECTS)
+{{% /section %}}
 {{% /article %}}
 
 {{% article class="hsr" %}}
 ### Hochschule für Technik Rapperswil
 {{% timespan from="2007-09" to="2008-09" %}}
 
+{{% section class="details" %}}
 Field
 : Computer Science
 
 Diploma
 : None
+{{% /section %}}
 {{% /article %}}
 
 {{% article class="epfl" %}}
 ### École Polytechnique Fédérale de Lausanne
 {{% timespan from="2004-09" to="2006-09" %}}
 
+{{% section class="details" %}}
 Field
 : Computer Science
 
 Diploma
 : None
+{{% /section %}}
 {{% /article %}}
 
 {{% article class="advanced-trainings" %}}
