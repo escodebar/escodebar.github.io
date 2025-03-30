@@ -29,51 +29,76 @@ address = """
 ### House of Test GmbH
 {{% timespan from="2023-02" to="now" %}}
 
-#### Projects {#projects-hot}
+{{% section class="assignments" %}}
+#### Assignments {#assignments-hot}
 - Heating system temperature calibration test bench
 - Test-Lab hardware reservation and setup system
 - Concourse CI setup for a multirepo product
 - Thrift Server Pytest plugin for mocking
 - Gherkin and Behave rules for Bazel
 - Environment definitions in Nix
+- Adapt the hiring process
 - Model factories library
+{{% /section %}}
+
+
+{{% section class="achievements" %}}
+#### Achievements {#achievements-hot}
+- Reduce embedded system development feedback loop from weeks to minutes
+- Reduce frontend integration feedback loop from months to minutes
+- Reduce test hardware reservation from days to seconds
+{{% /section %}}
 {{% /article %}}
 
 {{% article class="experience" %}}
 ### DECTRIS AG
 {{% timespan from="2018-09" to="2022-10" %}}
 
-#### Projects {#projects-dectris}
+{{% section class="assignments" %}}
+#### Assignments {#assignments-dectris}
 - Detector Calibration Reimplementation
 - Detector Calibration Test Environment
 - Proposal for Data Democratization
 - Infrastructure for ERP Solution
 - Data Warehouse Proof of Concept
 - Git and Collaboration Training
+- CI/CD Solution Replacement
 - Detector User Interface
 - ERP Solution Upgrade
+{{% /section %}}
+
+{{% section class="achievements" %}}
+#### Achievements {#achievements-dectris}
+- Reduce deployment time of a critical legacy database system by 90%
+- Reduce ERP test environment creation from 6 weeks to 5 minutes
+- Increase Git log readability
+{{% /section %}}
 {{% /article %}}
 
 {{% article class="experience" %}}
 ### 4teamwork AG
 {{% timespan from="2017-01" to="2018-07" %}}
 
-#### Projects {#projects-4tw}
+{{% section class="assignments" %}}
+#### Assignments {#assignments-4tw}
 - Event Calendar and Integration to Web Application
 - Inspection Administration and Reporting Software
 - Web Application for Substitution Management
 - Meeting Assistance Web Application
 - Boilerplate for Django projects
 - Contributions to opengever.core
+{{% /section %}}
 {{% /article %}}
 
 {{% article class="experience" %}}
 ### Adfinis SyGroup AG
 {{% timespan from="2015-09" to="2016-01" %}}
 
-#### Projects {#projects-adsy}
+{{% section class="assignments" %}}
+#### Assignments {#assignments-adsy}
 - Server Monitoring, Alarming and Reporting System
 - OpenOffice Patch
+{{% /section %}}
 {{% /article %}}
 {{% /section %}}
 

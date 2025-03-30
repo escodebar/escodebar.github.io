@@ -35,6 +35,31 @@ main .roles li:not(:last-child)::after {
   margin-right: 0.25em;
 }
 
+main .professional-experience article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header       timespan"
+    "assignments  achievements";
+}
+
+main .professional-experience h3 {
+  grid-area: header;
+}
+
+main .professional-experience .timespan {
+  grid-area: timespan;
+  align-self: center;
+}
+
+main .professional-experience .assignments {
+  grid-area: assignments;
+}
+
+main .professional-experience .achievements {
+  grid-area: achievements;
+}
+
 main .skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
