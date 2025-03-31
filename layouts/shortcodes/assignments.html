@@ -1,0 +1,16 @@
+{{- $file := .Get "file" | default "data/assignments.json" -}}
+{{- $class := .Get "class" | default "assignments" -}}
+{{- $id := .Get "id" | default "assignments" -}}
+{{- $assignments := resources.Get $file | transform.Unmarshal -}}
+{{- if not $assignments }}
+  <p>Could not load assignments</p>
+{{- else }}
+  <section class="{{- $class -}}">
+    <h4 id="{{- $id -}}">Assignments</h4>
+    <ul class="stack">
+      {{- range $assignments }}
+        <li data-roles="{{ delimit .roles " " }}">{{ .name }}</li>
+      {{- end }}
+    </ul>
+  </section>
+{{- end }}

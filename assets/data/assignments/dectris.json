@@ -1,0 +1,11 @@
+[
+    {"name": "Detector Calibration Reimplementation", "roles": ["dev", "test-eng"]},
+    {"name": "Detector Calibration Test Environment", "roles": ["dx-eng", "sys-eng", "test-eng"]},
+    {"name": "Proposal for Data Democratization", "roles": []},
+    {"name": "Infrastructure for ERP Solution", "roles": ["dx-eng", "sys-eng", "test-eng"]},
+    {"name": "Data Warehouse Proof of Concept", "roles": ["dev"]},
+    {"name": "Git and Collaboration Training", "roles": ["dx-eng", "speaker"]},
+    {"name": "CI/CD Solution Replacement", "roles": ["dx-eng", "sys-eng", "test-eng"]},
+    {"name": "Detector User Interface", "roles": ["dev", "test-eng"]},
+    {"name": "ERP Solution Upgrade", "roles": ["dev", "sys-eng", "test-eng"]}
+]

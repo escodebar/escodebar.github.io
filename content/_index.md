@@ -29,18 +29,7 @@ address = """
 ### House of Test GmbH
 {{% timespan from="2023-02" to="now" %}}
 
-{{% section class="assignments" %}}
-#### Assignments {#assignments-hot}
-- Heating system temperature calibration test bench
-- Test-Lab hardware reservation and setup system
-- Concourse CI setup for a multirepo product
-- Thrift Server Pytest plugin for mocking
-- Gherkin and Behave rules for Bazel
-- Environment definitions in Nix
-- Adapt the hiring process
-- Model factories library
-{{% /section %}}
-
+{{% assignments id="assignments-hot" file="data/assignments/hot.json" %}}
 
 {{% section class="achievements" %}}
 #### Achievements {#achievements-hot}
@@ -54,18 +43,7 @@ address = """
 ### DECTRIS AG
 {{% timespan from="2018-09" to="2022-10" %}}
 
-{{% section class="assignments" %}}
-#### Assignments {#assignments-dectris}
-- Detector Calibration Reimplementation
-- Detector Calibration Test Environment
-- Proposal for Data Democratization
-- Infrastructure for ERP Solution
-- Data Warehouse Proof of Concept
-- Git and Collaboration Training
-- CI/CD Solution Replacement
-- Detector User Interface
-- ERP Solution Upgrade
-{{% /section %}}
+{{% assignments id="assignments-dectris" file="data/assignments/dectris.json" %}}
 
 {{% section class="achievements" %}}
 #### Achievements {#achievements-dectris}
@@ -79,26 +57,14 @@ address = """
 ### 4teamwork AG
 {{% timespan from="2017-01" to="2018-07" %}}
 
-{{% section class="assignments" %}}
-#### Assignments {#assignments-4tw}
-- Event Calendar and Integration to Web Application
-- Inspection Administration and Reporting Software
-- Web Application for Substitution Management
-- Meeting Assistance Web Application
-- Boilerplate for Django projects
-- Contributions to opengever.core
-{{% /section %}}
+{{% assignments id="assignments-4tw" file="data/assignments/4tw.json" %}}
 {{% /article %}}
 
 {{% article class="experience" %}}
 ### Adfinis SyGroup AG
 {{% timespan from="2015-09" to="2016-01" %}}
 
-{{% section class="assignments" %}}
-#### Assignments {#assignments-adsy}
-- Server Monitoring, Alarming and Reporting System
-- OpenOffice Patch
-{{% /section %}}
+{{% assignments id="assignments-adsy" file="data/assignments/adsy.json" %}}
 {{% /article %}}
 {{% /section %}}
 

@@ -1,0 +1,10 @@
+[
+    {"name": "Heating system temperature calibration test bench", "roles": ["dx-eng", "test-eng"]},
+    {"name": "Test-Lab hardware reservation and setup system", "roles": ["dev", "dx-eng", "test-eng"]},
+    {"name": "Concourse CI setup for a multirepo product", "roles": ["dx-eng", "sys-eng", "test-eng"]},
+    {"name": "Thrift Server Pytest plugin for mocking", "roles": ["dev", "dx-eng", "test-eng"]},
+    {"name": "Gherkin and Behave rules for Bazel", "roles": ["dx-eng", "test-eng"]},
+    {"name": "Environment definitions in Nix", "roles": ["dx-eng", "test-eng"]},
+    {"name": "Adapt the hiring process", "roles": []},
+    {"name": "Model factories library", "roles": ["dev", "dx-eng", "test-eng"]}
+]
