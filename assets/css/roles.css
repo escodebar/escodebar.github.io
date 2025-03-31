@@ -1,0 +1,19 @@
+main .roles li {
+  cursor: pointer;
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+main .roles li::after {
+  color: var(--color-default);
+  text-decoration: none;
+  pointer-events: none;
+}
+
+main .skills .technology-stack .highlight {
+  color: var(--color-magenta);
+}
+
+main .skills .technology-stack::after {
+  color: var(--color-default);
+}
