@@ -14,6 +14,14 @@ main .roles li::after {
   pointer-events: none;
 }
 
+main .assignments .highlight {
+  color: var(--color-highlight);
+}
+
+main .assignments .highlight::after {
+  color: var(--color-default);
+}
+
 main .skills .technology-stack .highlight {
   color: var(--color-highlight);
 }
