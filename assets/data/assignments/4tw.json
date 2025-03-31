@@ -1,8 +1,14 @@
 [
-    {"name": "Event Calendar and Integration to Web Application", "roles": ["dev"]},
-    {"name": "Inspection Administration and Reporting Software", "roles": ["dev"]},
-    {"name": "Web Application for Substitution Management", "roles": ["dev"]},
-    {"name": "Meeting Assistance Web Application", "roles": ["dev"]},
-    {"name": "Boilerplate for Django projects", "roles": ["dev", "dx-eng"]},
-    {"name": "Contributions to opengever.core", "roles": ["dev"]}
+  {
+    "name": "Event Calendar and Integration to Web Application",
+    "roles": ["dev"]
+  },
+  {
+    "name": "Inspection Administration and Reporting Software",
+    "roles": ["dev"]
+  },
+  { "name": "Web Application for Substitution Management", "roles": ["dev"] },
+  { "name": "Meeting Assistance Web Application", "roles": ["dev"] },
+  { "name": "Boilerplate for Django projects", "roles": ["dev", "dx-eng"] },
+  { "name": "Contributions to opengever.core", "roles": ["dev"] }
 ]

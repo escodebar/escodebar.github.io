@@ -62,7 +62,10 @@
   { "name": "Bazel", "roles": ["dev", "dx-eng", "test-eng"] },
   { "name": "Caddy", "roles": ["sys-eng"] },
   { "name": "LaTeX", "roles": ["sci"] },
-  { "name": "Linux", "roles": ["dev", "dx-eng", "sci", "sysadm", "sys-eng", "test-eng"] },
+  {
+    "name": "Linux",
+    "roles": ["dev", "dx-eng", "sci", "sysadm", "sys-eng", "test-eng"]
+  },
   { "name": "macOS", "roles": ["dev", "dx-eng", "sys-eng", "test-eng"] },
   { "name": "Nginx", "roles": ["sys-eng"] },
   { "name": "NixOS", "roles": ["dev", "dx-eng", "sys-eng", "test-eng"] },
@@ -103,7 +106,10 @@
   { "name": "C++", "roles": ["dev", "sci"] },
   { "name": "CSS", "roles": ["dev", "test-eng"] },
   { "name": "fzf", "roles": ["dx-eng"] },
-  { "name": "Git", "roles": ["dev", "dx-eng", "speaker", "sys-eng", "test-eng"] },
+  {
+    "name": "Git",
+    "roles": ["dev", "dx-eng", "speaker", "sys-eng", "test-eng"]
+  },
   { "name": "K8s", "roles": ["dev", "sys-eng"] },
   { "name": "MSW", "roles": ["dx-eng", "test-eng"] },
   { "name": "Nix", "roles": ["dev", "dx-eng", "test-eng", "sys-eng"] },
