@@ -34,6 +34,7 @@
   --color-header: var(--color-magenta);
   --color-border: var(--color-base00);
   --color-link: var(--color-blue);
+  --color-highlight: var(--color-cyan);
 }
 
 :root.dark,
@@ -43,4 +44,5 @@
   --color-header: var(--color-magenta);
   --color-border: var(--color-base0);
   --color-link: var(--color-blue);
+  --color-highlight: var(--color-cyan);
 }

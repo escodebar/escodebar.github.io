@@ -4,6 +4,10 @@ main .roles li {
   text-decoration: underline;
 }
 
+main .roles li.active {
+  color: var(--color-highlight);
+}
+
 main .roles li::after {
   color: var(--color-default);
   text-decoration: none;
@@ -11,7 +15,7 @@ main .roles li::after {
 }
 
 main .skills .technology-stack .highlight {
-  color: var(--color-magenta);
+  color: var(--color-highlight);
 }
 
 main .skills .technology-stack::after {

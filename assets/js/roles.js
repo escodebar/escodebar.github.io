@@ -21,13 +21,22 @@ function buildRoleMap(toolItems) {
 }
 
 function bindRoleClickEvents(roleButtons, toolItems, roleMap) {
+  let activeRole = null;
   roleButtons.forEach(button => {
     button.addEventListener('click', () => {
       const selectedRole = button.getAttribute('data-role');
+      const isSameRole = selectedRole === activeRole;
       toolItems.forEach(item => item.classList.remove('highlight'));
-      (roleMap[selectedRole] || []).forEach(item =>
-        item.classList.add('highlight')
-      );
+      roleButtons.forEach(btn => btn.classList.remove('active'));
+      if (isSameRole) {
+        activeRole = null;
+      } else {
+        activeRole = selectedRole;
+        button.classList.add('active');
+        (roleMap[selectedRole] || []).forEach(item =>
+          item.classList.add('highlight')
+        );
+      }
     });
   });
 }
