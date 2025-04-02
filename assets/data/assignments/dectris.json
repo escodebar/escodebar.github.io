@@ -1,23 +1,103 @@
 [
   {
     "name": "Detector Calibration Reimplementation",
-    "roles": ["dev", "test-eng"]
+    "roles": ["dev", "test-eng"],
+    "stack": [
+      "bitbucket",
+      "concourse",
+      "bazel",
+      "docker",
+      "git",
+      "grpc",
+      "k8s",
+      "numpy",
+      "plotly",
+      "pytest",
+      "python"
+    ]
   },
   {
     "name": "Detector Calibration Test Environment",
-    "roles": ["dx-eng", "sys-eng", "test-eng"]
+    "roles": ["dx-eng", "sys-eng", "test-eng"],
+    "stack": [
+      "bash",
+      "bitbucket",
+      "concourse",
+      "bazel",
+      "docker",
+      "git",
+      "grpc",
+      "k8s",
+      "linux",
+      "pytest",
+      "python"
+    ]
   },
-  { "name": "Proposal for Data Democratization", "roles": [] },
+  { "name": "Proposal for Data Democratization", "roles": [], "stack": [] },
   {
     "name": "Infrastructure for ERP Solution",
-    "roles": ["dx-eng", "sys-eng", "test-eng"]
+    "roles": ["dx-eng", "sys-eng", "test-eng"],
+    "stack": [
+      "bash",
+      "bitbucket",
+      "concourse",
+      "bazel",
+      "docker",
+      "git",
+      "postgresql",
+      "linux"
+    ]
   },
-  { "name": "Data Warehouse Proof of Concept", "roles": ["dev"] },
-  { "name": "Git and Collaboration Training", "roles": ["dx-eng", "speaker"] },
+  {
+    "name": "Data Warehouse Proof of Concept",
+    "roles": ["dev"],
+    "stack": [
+      "bitbucket",
+      "django",
+      "git",
+      "elasticsearch",
+      "postgresql",
+      "postgrest",
+      "sqitch"
+    ]
+  },
+  {
+    "name": "Git and Collaboration Training",
+    "roles": ["dx-eng", "speaker"],
+    "stack": ["bitbucket", "git"]
+  },
   {
     "name": "CI/CD Solution Replacement",
-    "roles": ["dx-eng", "sys-eng", "test-eng"]
+    "roles": ["dx-eng", "sys-eng", "test-eng"],
+    "stack": ["concourse"]
   },
-  { "name": "Detector User Interface", "roles": ["dev", "test-eng"] },
-  { "name": "ERP Solution Upgrade", "roles": ["dev", "sys-eng", "test-eng"] }
+  {
+    "name": "Detector User Interface",
+    "roles": ["dev", "test-eng"],
+    "stack": [
+      "bitbucket",
+      "concourse",
+      "docker",
+      "javascript",
+      "git",
+      "grpc",
+      "npm",
+      "vue",
+      "vuetify"
+    ]
+  },
+  {
+    "name": "ERP Solution Upgrade",
+    "roles": ["dev", "sys-eng", "test-eng"],
+    "stack": [
+      "bash",
+      "bitbucket",
+      "concourse",
+      "bazel",
+      "docker",
+      "git",
+      "postgresql",
+      "linux"
+    ]
+  }
 ]

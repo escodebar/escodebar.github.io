@@ -1,14 +1,56 @@
 [
   {
     "name": "Event Calendar and Integration to Web Application",
-    "roles": ["dev"]
+    "roles": ["dev"],
+    "stack": ["git", "github", "javascript", "plone", "python", "requests"]
   },
   {
     "name": "Inspection Administration and Reporting Software",
-    "roles": ["dev"]
+    "roles": ["dev"],
+    "stack": [
+      "chai",
+      "django",
+      "djangorestframework",
+      "git",
+      "github",
+      "javascript",
+      "jest",
+      "postgresql",
+      "python",
+      "vue",
+      "vuetify"
+    ]
   },
-  { "name": "Web Application for Substitution Management", "roles": ["dev"] },
-  { "name": "Meeting Assistance Web Application", "roles": ["dev"] },
-  { "name": "Boilerplate for Django projects", "roles": ["dev", "dx-eng"] },
-  { "name": "Contributions to opengever.core", "roles": ["dev"] }
+  {
+    "name": "Web Application for Substitution Management",
+    "roles": ["dev"],
+    "stack": ["django", "git", "github", "python", "postgresql"]
+  },
+  {
+    "name": "Meeting Assistance Web Application",
+    "roles": ["dev"],
+    "stack": [
+      "chai",
+      "django",
+      "djangorestframework",
+      "git",
+      "github",
+      "javascript",
+      "jest",
+      "postgresql",
+      "python",
+      "vue",
+      "vuetify"
+    ]
+  },
+  {
+    "name": "Boilerplate for Django projects",
+    "roles": ["dev", "dx-eng"],
+    "stack": ["django", "git", "github", "python", "sentry"]
+  },
+  {
+    "name": "Contributions to opengever.core",
+    "roles": ["dev"],
+    "stack": ["git", "github", "plone", "python", "sentry"]
+  }
 ]

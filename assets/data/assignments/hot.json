@@ -1,25 +1,90 @@
 [
   {
     "name": "Heating system temperature calibration test bench",
-    "roles": ["dx-eng", "test-eng"]
+    "roles": ["dx-eng", "test-eng"],
+    "stack": [
+      "c",
+      "concourse",
+      "bazel",
+      "git",
+      "gitlab",
+      "numpy",
+      "pytest",
+      "python"
+    ]
   },
   {
     "name": "Test-Lab hardware reservation and setup system",
-    "roles": ["dev", "dx-eng", "test-eng"]
+    "roles": ["dev", "dx-eng", "test-eng"],
+    "stack": [
+      "beercss",
+      "docker",
+      "git",
+      "gitlab",
+      "gitlab-ci",
+      "jose",
+      "k8s",
+      "kustomize",
+      "nix",
+      "postgresql",
+      "postgrest",
+      "pyjwt",
+      "pytest",
+      "python",
+      "sqitch",
+      "vite",
+      "vitest",
+      "vue"
+    ]
   },
   {
     "name": "Concourse CI setup for a multirepo product",
-    "roles": ["dx-eng", "sys-eng", "test-eng"]
+    "roles": ["dx-eng", "sys-eng", "test-eng"],
+    "stack": [
+      "bazel",
+      "behave",
+      "concourse",
+      "gherkin",
+      "nix",
+      "pytest",
+      "python"
+    ]
   },
   {
     "name": "Thrift Server Pytest plugin for mocking",
-    "roles": ["dev", "dx-eng", "test-eng"]
+    "roles": ["dev", "dx-eng", "test-eng"],
+    "stack": ["git", "gitlab", "gitlab-ci", "nix", "pytest", "python", "thrift"]
   },
   {
     "name": "Gherkin and Behave rules for Bazel",
-    "roles": ["dx-eng", "test-eng"]
+    "roles": ["dx-eng", "test-eng"],
+    "stack": [
+      "bazel",
+      "behave",
+      "gherkin",
+      "git",
+      "gitlab",
+      "python",
+      "starlark"
+    ]
   },
-  { "name": "Environment definitions in Nix", "roles": ["dx-eng", "test-eng"] },
-  { "name": "Adapt the hiring process", "roles": [] },
-  { "name": "Model factories library", "roles": ["dev", "dx-eng", "test-eng"] }
+  {
+    "name": "Environment definitions in Nix",
+    "roles": ["dx-eng", "test-eng"],
+    "stack": ["git", "gitlab", "nix"]
+  },
+  { "name": "Adapt the hiring process", "roles": [], "stack": [] },
+  {
+    "name": "Model factories library",
+    "roles": ["dev", "dx-eng", "test-eng"],
+    "stack": [
+      "factory-boy",
+      "git",
+      "gitlab",
+      "gitlab-ci",
+      "pytest",
+      "python",
+      "thrift"
+    ]
+  }
 ]
