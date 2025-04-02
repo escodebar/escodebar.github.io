@@ -11,7 +11,7 @@
   {{- if $stack }}
     <ul class="stack">
       {{- range sort $stack "name" "asc" }}
-        <li data-roles="{{ delimit .roles " " }}">{{ .name }}</li>
+        <li data-tool="{{- .key -}}" data-roles="{{ delimit .roles " " }}">{{ .name }}</li>
       {{- end }}
     </ul>
   {{- else }}

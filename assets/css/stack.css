@@ -1,0 +1,23 @@
+main .skills .technology-stack .stack li {
+  cursor: pointer;
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+main .skills .technology-stack .stack li.active {
+  color: var(--color-highlight);
+}
+
+main .skills .technology-stack .stack li::after {
+  color: var(--color-default);
+  text-decoration: none;
+  pointer-events: none;
+}
+
+main .assignments .highlight {
+  color: var(--color-highlight);
+}
+
+main .assignments .highlight::after {
+  color: var(--color-default);
+}

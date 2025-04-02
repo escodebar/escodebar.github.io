@@ -7,9 +7,9 @@
 {{- else }}
   <section class="{{- $class -}}">
     <h4 id="{{- $id -}}">Assignments</h4>
-    <ul class="stack">
+    <ul class="assignments">
       {{- range $assignments }}
-        <li data-roles="{{ delimit .roles " " }}">{{ .name }}</li>
+        <li data-stack="{{ delimit .stack " " }}" data-roles="{{ delimit .roles " " }}">{{ .name }}</li>
       {{- end }}
     </ul>
   </section>
