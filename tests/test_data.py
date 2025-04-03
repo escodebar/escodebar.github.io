@@ -15,7 +15,6 @@ def company(request):
         return json.load(fp)
 
 
-@pytest.mark.xfail
 def test_the_stack_is_complete(stack, company):
     stack_keys = set(map(lambda x: x["key"], stack))
     used_stack = set(reduce(lambda x, y: x + y["stack"], company, []))

@@ -13,6 +13,7 @@
   },
   { "name": "bats", "key": "bats", "roles": ["test-eng"] },
   { "name": "Bazel", "key": "bazel", "roles": ["dev", "dx-eng", "test-eng"] },
+  { "name": "Behave", "key": "behave", "roles": ["dx-eng", "test-eng"] },
   { "name": "Beer CSS", "key": "beercss", "roles": ["test-eng"] },
   { "name": "Bitbucket", "key": "bitbucket", "roles": ["dev"] },
   { "name": "C", "key": "c", "roles": ["dev", "sci", "test-eng"] },
@@ -56,6 +57,11 @@
   { "name": "fasd", "key": "fasd", "roles": ["dx-eng"] },
   { "name": "FreezeGun", "key": "freezegun", "roles": ["dev", "test-eng"] },
   { "name": "fzf", "key": "fzf", "roles": ["dx-eng"] },
+  {
+    "name": "Gherkin",
+    "key": "gherkin",
+    "roles": ["dx-eng", "test-eng", "test-mgr"]
+  },
   {
     "name": "Git",
     "key": "git",
