@@ -16,6 +16,9 @@
       ];
       perSystem = {pkgs, ...}: let
         sources = ./.;
+        python = pkgs.python3.withPackages (ps: with ps; [
+          pytest
+        ]);
       in {
         checks = {
           formatting =
@@ -34,6 +37,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               hugo
+              python
             ];
           };
         };
