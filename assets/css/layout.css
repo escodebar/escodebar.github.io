@@ -69,17 +69,6 @@ main .skills {
     "stack        stack";
 }
 
-@media (max-width: 768px) {
-  main .skills {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "competences"
-      "languages"
-      "stack";
-  }
-}
-
 main .skills #skills {
   grid-area: header;
 }
@@ -148,4 +137,36 @@ main .education dt {
 
 main .education dd {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  main .professional-experience article {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "timespan"
+      "assignments"
+      "achievements";
+  }
+}
+
+@media (max-width: 768px) {
+  main .skills {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "competences"
+      "languages"
+      "stack";
+  }
+}
+
+@media (max-width: 768px) {
+  main .education article:not(.advanced-trainings) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "institution"
+      "timespan"
+      "details";
+  }
 }
