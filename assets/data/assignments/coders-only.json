@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Webpage Design and Maintenance",
+    "roles": ["dev", "sys-admin"],
+    "stack": [
+      "css",
+      "direnv",
+      "docopt",
+      "fasd",
+      "fzf",
+      "git",
+      "github",
+      "github-actions",
+      "hugo",
+      "html",
+      "json",
+      "macos",
+      "markdown",
+      "nix",
+      "pytest",
+      "python",
+      "toml",
+      "vim"
+    ]
+  },
+  {
+    "name": "Slides Repository and Templates",
+    "roles": ["dev", "dx-eng"],
+    "stack": [
+      "css",
+      "direnv",
+      "fasd",
+      "fzf",
+      "macos",
+      "markdown",
+      "marp",
+      "nix",
+      "vim",
+      "zsh"
+    ]
+  }
+]

@@ -1,19 +1,48 @@
 [
   {
+    "name": "Legacy Production Database System Maintenance",
+    "roles": ["dev", "dx-eng"],
+    "stack": [
+      "bitbucket",
+      "concourse",
+      "fasd",
+      "fzf",
+      "git",
+      "json",
+      "linux",
+      "rails",
+      "ruby",
+      "sql",
+      "tmux",
+      "vim",
+      "zsh"
+    ]
+  },
+  {
     "name": "Detector Calibration Reimplementation",
-    "roles": ["dev", "test-eng"],
+    "roles": ["dev", "dx-eng", "test-eng"],
     "stack": [
       "bitbucket",
       "concourse",
       "bazel",
       "docker",
+      "fasd",
       "git",
       "grpc",
+      "jira",
+      "json",
       "k8s",
+      "linux",
       "numpy",
       "plotly",
+      "pyenv",
       "pytest",
-      "python"
+      "python",
+      "rst",
+      "tmux",
+      "vim",
+      "yaml",
+      "zsh"
     ]
   },
   {
@@ -25,12 +54,20 @@
       "concourse",
       "bazel",
       "docker",
+      "fasd",
       "git",
       "grpc",
+      "jira",
       "k8s",
       "linux",
+      "pyenv",
       "pytest",
-      "python"
+      "python",
+      "rst",
+      "systemd",
+      "tmux",
+      "vim",
+      "zsh"
     ]
   },
   { "name": "Proposal for Data Democratization", "roles": [], "stack": [] },
@@ -41,11 +78,18 @@
       "bash",
       "bitbucket",
       "concourse",
+      "confluence",
       "bazel",
       "docker",
+      "fasd",
       "git",
+      "pyenv",
       "postgresql",
-      "linux"
+      "linux",
+      "systemd",
+      "tmux",
+      "vim",
+      "zsh"
     ]
   },
   {
@@ -53,37 +97,83 @@
     "roles": ["dev"],
     "stack": [
       "bitbucket",
+      "confluence",
       "django",
+      "fasd",
+      "fzf",
       "git",
       "elasticsearch",
+      "linux",
       "postgresql",
       "postgrest",
-      "sqitch"
+      "pyenv",
+      "sqitch",
+      "sql",
+      "tmux",
+      "vim",
+      "zsh"
     ]
   },
   {
     "name": "Git and Collaboration Training",
     "roles": ["dx-eng", "speaker"],
-    "stack": ["bitbucket", "git"]
+    "stack": [
+      "bitbucket",
+      "confluence",
+      "fasd",
+      "git",
+      "linux",
+      "pyenv",
+      "python",
+      "pytest",
+      "reveal-md",
+      "tmux",
+      "vim",
+      "zsh"
+    ]
   },
   {
     "name": "CI/CD Solution Replacement",
     "roles": ["dx-eng", "sys-eng", "test-eng"],
-    "stack": ["concourse"]
+    "stack": [
+      "bazel",
+      "buildkite",
+      "concourse",
+      "confluence",
+      "docker",
+      "drone",
+      "fasd",
+      "k8s",
+      "linux",
+      "tmux",
+      "vim",
+      "yaml",
+      "zsh"
+    ]
   },
   {
     "name": "Detector User Interface",
-    "roles": ["dev", "test-eng"],
+    "roles": ["dev", "dx-eng", "test-eng"],
     "stack": [
       "bitbucket",
       "concourse",
+      "cypress",
       "docker",
       "javascript",
+      "fasd",
       "git",
+      "go",
       "grpc",
+      "nodenv",
       "npm",
+      "playwright",
+      "podman",
+      "tmux",
+      "vue-router",
       "vue",
-      "vuetify"
+      "vuetify",
+      "vuex",
+      "zsh"
     ]
   },
   {
@@ -91,13 +181,27 @@
     "roles": ["dev", "sys-eng", "test-eng"],
     "stack": [
       "bash",
+      "bazel",
       "bitbucket",
       "concourse",
-      "bazel",
+      "confluence",
+      "django",
       "docker",
+      "fasd",
+      "fzf",
       "git",
+      "grafana",
+      "helm",
+      "linux",
       "postgresql",
-      "linux"
+      "pyenv",
+      "python",
+      "pytest",
+      "ripgrep",
+      "sql",
+      "systemd",
+      "tmux",
+      "zsh"
     ]
   }
 ]

@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Webpage Design and Maintenance",
+    "roles": ["dev", "sys-admin"],
+    "stack": [
+      "apache",
+      "cherokee",
+      "css",
+      "django",
+      "git",
+      "html",
+      "jquery",
+      "lighttpd",
+      "markdown",
+      "nginx",
+      "python",
+      "xhtml"
+    ]
+  },
+  {
+    "name": "Web Content Management System",
+    "roles": ["dev", "sys-admin"],
+    "stack": [
+      "apache",
+      "css",
+      "javascript",
+      "jquery",
+      "macos",
+      "mysql",
+      "php",
+      "xhtml",
+      "xml"
+    ]
+  }
+]

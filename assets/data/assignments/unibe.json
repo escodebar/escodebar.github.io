@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Silicon Photomultiplier Calibration System",
+    "roles": ["dev", "sci", "test-eng"],
+    "stack": [
+      "c",
+      "cpp",
+      "git",
+      "github",
+      "influxdb",
+      "jupyter",
+      "latex",
+      "linux",
+      "make",
+      "octave",
+      "python",
+      "root",
+      "screen",
+      "tmux",
+      "vim",
+      "yaml",
+      "zeromq",
+      "zsh"
+    ]
+  },
+  {
+    "name": "Statistical Analysis Tool Evaluation",
+    "roles": ["sci", "test-eng"],
+    "stack": [
+      "cpp",
+      "git",
+      "github",
+      "gnuplot",
+      "latex",
+      "linux",
+      "make",
+      "screen",
+      "vim",
+      "zsh"
+    ]
+  },
+  {
+    "name": "Experiment Evaluations",
+    "roles": ["dev", "sci", "test-eng"],
+    "stack": [
+      "c",
+      "git",
+      "github",
+      "gnuplot",
+      "jupyter",
+      "latex",
+      "linux",
+      "make",
+      "matlab",
+      "mathematica",
+      "octave",
+      "python",
+      "vim",
+      "zsh"
+    ]
+  }
+]

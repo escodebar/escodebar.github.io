@@ -6,11 +6,18 @@
       "c",
       "concourse",
       "bazel",
+      "fzf",
       "git",
       "gitlab",
+      "jira",
+      "linux",
+      "macos",
       "numpy",
+      "pyenv",
       "pytest",
-      "python"
+      "python",
+      "vscode",
+      "zsh"
     ]
   },
   {
@@ -18,42 +25,116 @@
     "roles": ["dev", "dx-eng", "test-eng"],
     "stack": [
       "beercss",
+      "caddy",
+      "direnv",
       "docker",
+      "fzf",
       "git",
       "gitlab",
       "gitlab-ci",
+      "jira",
       "jose",
       "k8s",
       "kustomize",
+      "macos",
+      "msw",
       "nix",
+      "openapi",
+      "pinia",
       "postgresql",
       "postgrest",
       "pyjwt",
       "pytest",
       "python",
       "sqitch",
+      "sops",
+      "vault",
       "vite",
       "vitest",
-      "vue"
+      "vscode",
+      "vue",
+      "yaml",
+      "zsh"
     ]
   },
   {
     "name": "Concourse CI setup for a multirepo product",
     "roles": ["dx-eng", "sys-eng", "test-eng"],
     "stack": [
+      "asciidoc",
       "bazel",
       "behave",
       "concourse",
+      "direnv",
+      "fzf",
       "gherkin",
+      "jira",
+      "macos",
       "nix",
       "pytest",
-      "python"
+      "python",
+      "rst",
+      "vscode",
+      "yaml",
+      "zsh"
     ]
   },
   {
     "name": "Thrift Server Pytest plugin for mocking",
     "roles": ["dev", "dx-eng", "test-eng"],
-    "stack": ["git", "gitlab", "gitlab-ci", "nix", "pytest", "python", "thrift"]
+    "stack": [
+      "direnv",
+      "fzf",
+      "git",
+      "gitlab",
+      "gitlab-ci",
+      "macos",
+      "nix",
+      "poetry",
+      "pytest",
+      "python",
+      "thrift",
+      "vscode",
+      "zsh"
+    ]
+  },
+  {
+    "name": "Cloud Infrastructure Production Line",
+    "roles": ["dx-eng", "test-eng", "test-mgr"],
+    "stack": [
+      "bash",
+      "confluence",
+      "fzf",
+      "gherkin",
+      "git",
+      "gitlab",
+      "jira",
+      "octane",
+      "vim"
+    ]
+  },
+  {
+    "name": "Mobile User Interface Testframework",
+    "roles": ["dx-eng", "test-eng"],
+    "stack": [
+      "direnv",
+      "docker",
+      "fzf",
+      "gitlab",
+      "gitlab-ci",
+      "ionic",
+      "jira",
+      "macos",
+      "mocks-server",
+      "nix",
+      "nodenv",
+      "npm",
+      "playwright",
+      "react",
+      "vitest",
+      "vscode",
+      "zsh"
+    ]
   },
   {
     "name": "Gherkin and Behave rules for Bazel",
@@ -61,30 +142,73 @@
     "stack": [
       "bazel",
       "behave",
+      "fzf",
       "gherkin",
       "git",
       "gitlab",
+      "jira",
+      "macos",
+      "poetry",
+      "pyenv",
       "python",
-      "starlark"
+      "starlark",
+      "vscode",
+      "zsh"
+    ]
+  },
+  {
+    "name": "Slides Repository and Templates",
+    "roles": ["dev", "dx-eng"],
+    "stack": [
+      "css",
+      "direnv",
+      "fzf",
+      "macos",
+      "markdown",
+      "marp",
+      "nix",
+      "vim",
+      "zsh"
     ]
   },
   {
     "name": "Environment definitions in Nix",
     "roles": ["dx-eng", "test-eng"],
-    "stack": ["git", "gitlab", "nix"]
+    "stack": ["direnv", "fzf", "git", "gitlab", "macos", "nix", "vscode", "zsh"]
   },
-  { "name": "Adapt the hiring process", "roles": [], "stack": [] },
   {
-    "name": "Model factories library",
+    "name": "Nix Build Infrastructure",
+    "roles": ["dx-eng", "test-eng"],
+    "stack": [
+      "direnv",
+      "fzf",
+      "git",
+      "gitlab",
+      "jira",
+      "macos",
+      "nix",
+      "nixos",
+      "vscode",
+      "zsh"
+    ]
+  },
+  { "name": "Adapt the Hiring Process", "roles": [], "stack": [] },
+  {
+    "name": "Model Factories Library",
     "roles": ["dev", "dx-eng", "test-eng"],
     "stack": [
+      "direnv",
       "factory-boy",
+      "fzf",
       "git",
       "gitlab",
       "gitlab-ci",
+      "macos",
       "pytest",
       "python",
-      "thrift"
+      "thrift",
+      "vscode",
+      "zsh"
     ]
   }
 ]

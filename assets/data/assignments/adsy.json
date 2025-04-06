@@ -2,7 +2,24 @@
   {
     "name": "Server Monitoring, Alarming and Reporting System",
     "roles": ["dev"],
-    "stack": ["git", "gitlab", "javascript", "php", "postgresql", "python"]
+    "stack": [
+      "fasd",
+      "git",
+      "gitlab",
+      "javascript",
+      "json",
+      "linux",
+      "php",
+      "postgresql",
+      "python",
+      "tmux",
+      "vim",
+      "zsh"
+    ]
   },
-  { "name": "OpenOffice Patch", "roles": ["dev"], "stack": ["cpp"] }
+  {
+    "name": "OpenOffice Patch",
+    "roles": ["dev"],
+    "stack": ["cpp", "fasd", "linux", "tmux", "vim", "zsh"]
+  }
 ]

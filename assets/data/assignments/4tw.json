@@ -2,7 +2,20 @@
   {
     "name": "Event Calendar and Integration to Web Application",
     "roles": ["dev"],
-    "stack": ["git", "github", "javascript", "plone", "python", "requests"]
+    "stack": [
+      "fasd",
+      "git",
+      "github",
+      "javascript",
+      "linux",
+      "macos",
+      "plone",
+      "python",
+      "requests",
+      "tmux",
+      "vim",
+      "zsh"
+    ]
   },
   {
     "name": "Inspection Administration and Reporting Software",
@@ -11,46 +24,105 @@
       "chai",
       "django",
       "djangorestframework",
+      "fasd",
       "git",
       "github",
       "javascript",
       "jest",
+      "json",
+      "macos",
+      "npm",
       "postgresql",
       "python",
+      "tmux",
+      "vim",
+      "vue-router",
       "vue",
-      "vuetify"
+      "vuetify",
+      "vuex",
+      "yarn",
+      "zsh"
     ]
   },
   {
     "name": "Web Application for Substitution Management",
     "roles": ["dev"],
-    "stack": ["django", "git", "github", "python", "postgresql"]
+    "stack": [
+      "caddy",
+      "django",
+      "fasd",
+      "git",
+      "github",
+      "macos",
+      "python",
+      "postgresql",
+      "tmux",
+      "vim",
+      "zsh"
+    ]
   },
   {
     "name": "Meeting Assistance Web Application",
     "roles": ["dev"],
     "stack": [
+      "axios",
       "chai",
       "django",
       "djangorestframework",
+      "fasd",
       "git",
       "github",
       "javascript",
       "jest",
+      "json",
+      "macos",
       "postgresql",
       "python",
+      "scss",
+      "tmux",
+      "vim",
+      "vue-router",
       "vue",
-      "vuetify"
+      "vuetify",
+      "vuex",
+      "zsh"
     ]
   },
   {
     "name": "Boilerplate for Django projects",
     "roles": ["dev", "dx-eng"],
-    "stack": ["django", "git", "github", "python", "sentry"]
+    "stack": [
+      "django",
+      "fasd",
+      "git",
+      "github",
+      "macos",
+      "python",
+      "sentry",
+      "tmux",
+      "vim",
+      "zsh"
+    ]
   },
   {
     "name": "Contributions to opengever.core",
     "roles": ["dev"],
-    "stack": ["git", "github", "plone", "python", "sentry"]
+    "stack": [
+      "fasd",
+      "git",
+      "github",
+      "json",
+      "macos",
+      "plone",
+      "python",
+      "scss",
+      "sentry",
+      "soap",
+      "tmux",
+      "vim",
+      "xml",
+      "zeep",
+      "zsh"
+    ]
   }
 ]

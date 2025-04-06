@@ -11,11 +11,11 @@
     "key": "bash",
     "roles": ["dev", "sysadm", "sys-eng", "test-eng"]
   },
-  { "name": "bats", "key": "bats", "roles": ["test-eng"] },
   { "name": "Bazel", "key": "bazel", "roles": ["dev", "dx-eng", "test-eng"] },
   { "name": "Behave", "key": "behave", "roles": ["dx-eng", "test-eng"] },
   { "name": "Beer CSS", "key": "beercss", "roles": ["test-eng"] },
   { "name": "Bitbucket", "key": "bitbucket", "roles": ["dev"] },
+  { "name": "Buildkite", "key": "buildkite", "roles": ["dev"] },
   { "name": "C", "key": "c", "roles": ["dev", "sci", "test-eng"] },
   { "name": "C++", "key": "cpp", "roles": ["dev", "sci"] },
   { "name": "Caddy", "key": "caddy", "roles": ["sys-eng"] },
@@ -32,8 +32,6 @@
     "roles": ["dev", "test-eng", "test-mgr"]
   },
   { "name": "CSS", "key": "css", "roles": ["dev", "test-eng"] },
-  { "name": "Cucumber", "key": "cucumber", "roles": ["test-eng", "test-mgr"] },
-  { "name": "curl", "key": "curl", "roles": ["dev", "sys-eng", "test-eng"] },
   { "name": "Cypress", "key": "cypress", "roles": ["dev", "test-eng"] },
   { "name": "direnv", "key": "direnv", "roles": ["dx-eng"] },
   {
@@ -48,6 +46,7 @@
     "roles": ["dev", "dx-eng", "sys-eng", "test-eng"]
   },
   { "name": "docopt", "key": "docopt", "roles": ["dev", "test-eng"] },
+  { "name": "Drone", "key": "drone", "roles": ["dx-eng"] },
   {
     "name": "Elasticsearch",
     "key": "elasticsearch",
@@ -55,7 +54,6 @@
   },
   { "name": "Factory Boy", "key": "factory-boy", "roles": ["dev", "test-eng"] },
   { "name": "fasd", "key": "fasd", "roles": ["dx-eng"] },
-  { "name": "FreezeGun", "key": "freezegun", "roles": ["dev", "test-eng"] },
   { "name": "fzf", "key": "fzf", "roles": ["dx-eng"] },
   {
     "name": "Gherkin",
@@ -92,11 +90,11 @@
   { "name": "Hugo", "key": "hugo", "roles": ["dev", "sys-eng"] },
   { "name": "Hugo", "key": "hugo", "roles": ["dev", "sys-eng"] },
   { "name": "InfluxDB", "key": "influxdb", "roles": ["sci"] },
+  { "name": "Ionic", "key": "ionic", "roles": ["dx-eng", "test-eng"] },
   { "name": "JavaScript", "key": "javascript", "roles": ["dev", "test-eng"] },
   { "name": "Jest", "key": "jest", "roles": ["dev", "test-eng"] },
   { "name": "Jira", "key": "jira", "roles": ["dev", "test-eng", "test-mgr"] },
   { "name": "jose", "key": "jose", "roles": ["dev", "test-eng"] },
-  { "name": "jq", "key": "jw", "roles": ["sys-eng"] },
   { "name": "jQuery", "key": "jquery", "roles": ["dev"] },
   { "name": "JSON", "key": "json", "roles": ["dev", "test-eng"] },
   { "name": "Jupyter", "key": "jupyter", "roles": ["dx-eng", "sci"] },
@@ -118,18 +116,18 @@
     "key": "macos",
     "roles": ["dev", "dx-eng", "sys-eng", "test-eng"]
   },
-  { "name": "Make", "key": "make", "roles": ["dev"] },
+  { "name": "Make", "key": "make", "roles": ["dev", "sci"] },
   {
     "name": "Markdown",
     "key": "markdown",
     "roles": ["dev", "dx-eng", "speaker", "test-eng"]
   },
   { "name": "Marp", "key": "marp", "roles": ["speaker", "sys-eng"] },
-  { "name": "marshmallow", "key": "marshmallow", "roles": ["dev"] },
   { "name": "Mathematica", "key": "mathematica", "roles": ["sci"] },
   { "name": "Matlab", "key": "matlab", "roles": ["sci"] },
   { "name": "Mocks Server", "key": "mocks-server", "roles": ["test-eng"] },
   { "name": "MSW", "key": "msw", "roles": ["dx-eng", "test-eng"] },
+  { "name": "MySQL", "key": "mysql", "roles": ["dev", "sysadm"] },
   { "name": "Nginx", "key": "nginx", "roles": ["sys-eng"] },
   {
     "name": "Nix",
@@ -148,6 +146,7 @@
   { "name": "Octave", "key": "octave", "roles": ["sci"] },
   { "name": "OpenAPI", "key": "openapi", "roles": ["dev", "test-eng"] },
   { "name": "PHP", "key": "php", "roles": ["dev"] },
+  { "name": "Pinia", "key": "pinia", "roles": ["dev"] },
   { "name": "Playwright", "key": "playwright", "roles": ["dev", "test-eng"] },
   { "name": "Plone", "key": "plone", "roles": ["dev"] },
   { "name": "Plotly", "key": "plotly", "roles": ["dev", "dx-eng", "sci"] },
@@ -174,9 +173,11 @@
     "key": "rst",
     "roles": ["dev", "test-eng", "test-mgr"]
   },
+  { "name": "reveal-md", "key": "reveal-md", "roles": ["speaker"] },
   { "name": "ripgrep", "key": "ripgrep", "roles": ["sys-eng"] },
-  { "name": "Ruby", "key": "ruby", "roles": ["dev"] },
-  { "name": "Rust", "key": "rust", "roles": ["dev"] },
+  { "name": "root", "key": "root", "roles": ["sci"] },
+  { "name": "Ruby", "key": "ruby", "roles": ["dev", "dx-eng"] },
+  { "name": "Ruby on Rails", "key": "rails", "roles": ["dev", "dx-eng"] },
   { "name": "screen", "key": "screen", "roles": ["sys-eng"] },
   { "name": "SCSS", "key": "scss", "roles": ["dev"] },
   { "name": "Sentry", "key": "sentry", "roles": ["dev", "sysadm"] },
@@ -185,6 +186,11 @@
   { "name": "Sqitch", "key": "sqitch", "roles": ["dev"] },
   { "name": "SQL", "key": "sql", "roles": ["dev", "test-eng"] },
   { "name": "Starlark", "key": "starlark", "roles": ["dev", "test-eng"] },
+  {
+    "name": "Systemd",
+    "key": "systemd",
+    "roles": ["dx-eng", "sys-eng", "test-eng"]
+  },
   { "name": "Thrift", "key": "thrift", "roles": ["test-eng", "dx-eng"] },
   { "name": "Tmux", "key": "tmux", "roles": ["dx-eng"] },
   { "name": "TOML", "key": "toml", "roles": ["dev", "sys-eng"] },
