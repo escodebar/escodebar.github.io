@@ -35,6 +35,7 @@
 
 :root {
   font-family: 'pragmata';
+  --color-default: var(--color-base1);
 }
 
 body {

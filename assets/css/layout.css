@@ -35,7 +35,7 @@ main .roles li:not(:last-child)::after {
   margin-right: 0.25em;
 }
 
-main .professional-experience article {
+main :is(.professional-experience, .extracurricular-experience) article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -43,16 +43,16 @@ main .professional-experience article {
     "assignments  achievements";
 }
 
-main .professional-experience h3 {
+main :is(.professional-experience, .extracurricular-experience) h3 {
   grid-area: header;
 }
 
-main .professional-experience .timespan {
+main :is(.professional-experience, .extracurricular-experience) .timespan {
   grid-area: timespan;
   align-self: center;
 }
 
-main .professional-experience .assignments {
+main :is(.professional-experience, .extracurricular-experience) .assignments {
   grid-area: assignments;
 }
 
@@ -140,7 +140,7 @@ main .education dd {
 }
 
 @media (max-width: 768px) {
-  main .professional-experience article {
+  main :is(.extracurricular-experience, .professional-experience) article {
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"

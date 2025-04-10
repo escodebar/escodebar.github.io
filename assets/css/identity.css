@@ -1,3 +1,82 @@
+:root {
+  --line-height: 1.3rem;
+  --header-color: var(--color-base2);
+  --h2-background-color: var(--color-base03);
+  --h3-background-color: var(--color-base01);
+  --h4-background-color: var(--color-base0);
+  --h5-background-color: var(--color-base2);
+  font-size: 12pt;
+}
+
+body * {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: var(--line-height);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body main>section {
+  margin-bottom: var(--line-height);
+}
+
+body :is(h2,h3,h4) {
+  align-items: center;
+  color: var(--header-color);
+  display: flex;
+}
+
+body :is(h2,h3,h4)::after {
+  align-items: center;
+  content: "";
+  flex-grow: 1;
+}
+
+body .pl-glyph {
+  align-items: center;
+  display: inline-block;
+}
+
+body h2 {
+  background-color: var(--h2-background-color);
+}
+body h2::after  {
+  background-color: var(--h3-background-color);
+  color: var(--h2-background-color);
+}
+
+body .pl-glyph.h3 {
+  background-color: var(--h3-background-color);
+  color: var(--h2-background-color);
+}
+body h3 {
+  background-color: var(--h3-background-color);
+}
+body h3::after {
+  background-color: var(--h4-background-color);
+  color: var(--h3-background-color);
+}
+body h3 + .timespan::before {
+  background-color: var(--h5-background-color);
+  color: var(--h4-background-color);
+  content: "";
+}
+body h3 + .timespan {
+  background-color: var(--h5-background-color);
+}
+
+body .pl-glyph.h4 {
+  background-color: var(--h4-background-color);
+  color: var(--h3-background-color);
+}
+body h4 {
+  background-color: var(--h4-background-color);
+}
+body h4::after {
+  background-color: var(--h5-background-color);
+  color: var(--h4-background-color);
+}
+
 header .manifesto {
   font-style: italic;
   margin: 0;
@@ -34,5 +113,6 @@ main .education dd {
 }
 
 main ul {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
+
