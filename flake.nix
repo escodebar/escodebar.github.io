@@ -61,10 +61,12 @@
             '';
             doCheck = true;
             checkInputs = with pkgs; [
+              python
               validator-nu
             ];
             checkPhase = ''
               vnu --skip-non-html public || exit 1
+              pytest || exit 2
             '';
           };
         };
