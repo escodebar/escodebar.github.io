@@ -16,9 +16,10 @@
       ];
       perSystem = {pkgs, ...}: let
         sources = ./.;
-        python = pkgs.python3.withPackages (ps: with ps; [
-          pytest
-        ]);
+        python = pkgs.python3.withPackages (ps:
+          with ps; [
+            pytest
+          ]);
       in {
         checks = {
           formatting =
