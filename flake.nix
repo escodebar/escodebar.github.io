@@ -38,6 +38,7 @@
           default = pkgs.mkShell {
             packages = with pkgs; [
               hugo
+              playwright-test
               python
             ];
           };
