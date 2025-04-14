@@ -24,57 +24,25 @@ body :is(h2,h3,h4) {
   align-items: center;
   color: var(--header-color);
   display: flex;
-}
-
-body :is(h2,h3,h4)::after {
-  align-items: center;
-  content: "";
-  flex-grow: 1;
-}
-
-body .pl-glyph {
-  align-items: center;
-  display: inline-block;
+  padding-left: 0.5rem;
 }
 
 body h2 {
   background-color: var(--h2-background-color);
 }
-body h2::after  {
-  background-color: var(--h3-background-color);
-  color: var(--h2-background-color);
-}
 
-body .pl-glyph.h3 {
-  background-color: var(--h3-background-color);
-  color: var(--h2-background-color);
-}
 body h3 {
   background-color: var(--h3-background-color);
 }
-body h3::after {
-  background-color: var(--h4-background-color);
-  color: var(--h3-background-color);
-}
-body h3 + .timespan::before {
-  background-color: var(--h5-background-color);
-  color: var(--h4-background-color);
-  content: "";
-}
+
 body h3 + .timespan {
-  background-color: var(--h5-background-color);
+  background-color: var(--h3-background-color);
+  color: var(--header-color);
+  padding-left: 0.5rem;
 }
 
-body .pl-glyph.h4 {
-  background-color: var(--h4-background-color);
-  color: var(--h3-background-color);
-}
 body h4 {
   background-color: var(--h4-background-color);
-}
-body h4::after {
-  background-color: var(--h5-background-color);
-  color: var(--h4-background-color);
 }
 
 header .manifesto {
@@ -116,3 +84,10 @@ main ul {
   padding-left: 1rem;
 }
 
+@media (max-width: 768px) {
+  body h3 + .timespan {
+    background-color: var(--h5-background-color);
+    color: var(--default-color);
+    padding-left: 0.5rem;
+  }
+}
