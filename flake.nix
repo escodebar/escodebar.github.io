@@ -37,6 +37,7 @@
         devShells = {
           default = pkgs.mkShell {
             packages = with pkgs; [
+              caddy
               hugo
               playwright-test
               python
