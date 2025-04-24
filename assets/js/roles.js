@@ -29,6 +29,8 @@ function buildRoleMap(toolItems) {
 function bindRoleClickEvents(roleButtons, items, roleMap) {
   let activeRole = null;
   roleButtons.forEach((button) => {
+    button.setAttribute("role", "button");
+    button.setAttribute("aria-role", "button");
     button.addEventListener("click", () => {
       const selectedRole = button.getAttribute("data-role");
       const isSameRole = selectedRole === activeRole;
