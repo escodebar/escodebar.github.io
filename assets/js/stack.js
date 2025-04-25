@@ -23,6 +23,8 @@ function buildToolMap(assignments) {
 function bindToolClickEvents(toolButtons, assignments, assignmentToolMap) {
   let activeTool = null;
   toolButtons.forEach((button) => {
+    button.setAttribute("role", "button");
+    button.setAttribute("aria-role", "button");
     button.addEventListener("click", () => {
       const selectedTool = button.getAttribute("data-tool");
       const isSameTool = selectedTool === activeTool;
