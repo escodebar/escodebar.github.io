@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toolRoleMap = buildRoleMap(toolItems);
 
   const assignmentItems = document.querySelectorAll(
-    ".assignments [data-roles]",
+    ".assignments [data-roles]"
   );
   const assignmentRoleMap = buildRoleMap(assignmentItems);
 
@@ -42,7 +42,7 @@ function bindRoleClickEvents(roleButtons, items, roleMap) {
         activeRole = selectedRole;
         button.classList.add("active");
         (roleMap[selectedRole] || []).forEach((item) =>
-          item.classList.add("highlight"),
+          item.classList.add("highlight")
         );
       }
     });
