@@ -29,7 +29,7 @@ function bindToolClickEvents(toolButtons, assignments, assignmentToolMap) {
       const selectedTool = button.getAttribute("data-tool");
       const isSameTool = selectedTool === activeTool;
       assignments.forEach((assignment) =>
-        assignment.classList.remove("highlight"),
+        assignment.classList.remove("highlight")
       );
       toolButtons.forEach((btn) => btn.classList.remove("active"));
       if (isSameTool) {
@@ -38,7 +38,7 @@ function bindToolClickEvents(toolButtons, assignments, assignmentToolMap) {
         activeTool = selectedTool;
         button.classList.add("active");
         (assignmentToolMap[selectedTool] || []).forEach((item) =>
-          item.classList.add("highlight"),
+          item.classList.add("highlight")
         );
       }
     });
